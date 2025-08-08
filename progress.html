@@ -1,0 +1,510 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HOOK 파트너스 페이지입니다.">
+	<meta property="og:title" content="HOOK 파트너스">
+	<meta property="og:description" content="마케팅의 시작 HOOK 파트너스">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>HOOK 파트너스</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+
+
+<body>
+<!-- 왼쪽메뉴 -->
+
+<section class="left_menu vt_top">
+
+	<h1 class="logo_area">
+		<div class="mb_side vt_mid">
+			<button type="button" class="open_menu">
+				<img src="img/ham.png" alt="메뉴 열기">
+			</button>
+		</div>
+
+		<a href="index2.html" class="link_a">
+			<span class="vt_mid gm logo">HOOK</span>
+			<span class="vt_mid part">파트너스</span>
+		</a>
+
+		<div class="mb_side vt_mid">
+			<button type="button" class="go_home">
+				<img src="img/mb_home.png" alt="홈으로">
+			</button>
+		</div>
+	</h1>
+
+	<div class="mb_black_bg"></div>
+
+	<div class="mb_white_bg">
+
+		<div class="close_area">
+			<button type="button" class="close_btn">
+				<img src="img/close_white.png" alt="닫기">
+			</button>
+		</div>
+
+		<div class="nav_profile">
+
+			<a href="profile_edit.html" class="vt_mid">
+				<div class="nick"><strong class="strong">유저아이디유저아이디유저아이디</strong> 님</div>
+			</a>
+
+			<div class="logout_area">
+				<button type="button" class="logout_btn">로그아웃</button>
+			</div>
+		</div>
+
+
+		<nav class="nav">
+			<a href="showroom.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav1.png" alt="쇼룸 이용권"></div>
+				<div class="vt_mid menu">쇼룸 이용권</div>
+			</a>
+			<a href="credit.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav2.png" alt="크레딧 충전"></div>
+				<div class="vt_mid menu">크레딧 충전</div>
+			</a>
+			<a href="credit_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav3.png" alt="크레딧 내역"></div>
+				<div class="vt_mid menu">크레딧 내역</div>
+			</a>
+			<a href="order_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav4.png" alt="주문 내역"></div>
+				<div class="vt_mid menu">주문 내역</div>
+			</a>
+			<a href="upload_ad.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav5.png" alt="광고 등록"></div>
+				<div class="vt_mid menu">광고 등록</div>
+			</a>
+			<a href="progress.html" class="nav_a on">
+				<div class="vt_mid icon"><img src="img/nav6_on.png" alt="진행 현황"></div>
+				<div class="vt_mid menu">진행 현황</div>
+			</a>
+		</nav>
+
+
+		<!-- <div class="btn_area">
+			<button type="button" class="logout_btn">로그아웃</button>
+		</div> -->
+
+	</div>
+</section>
+
+
+
+<!-- 상단프로필 -->
+
+<section class="right_con vt_top"> <!-- right_con 끝나는 태그는 tail.html에 있음 -->
+
+	<div class="top_bar">
+
+		<a href="index2.html" class="go_home">
+			<img src="img/icon_home.png" alt="홈으로 가기">
+		</a>
+
+		<a href="profile_edit.html" class="profile_area">
+			<div class="vt_mid profile">
+				<div class="grid">
+					<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+				</div>
+			</div>
+			<div class="vt_mid nick">유저아이디유저아이디</div>
+			<div class="vt_mid last">님</div>
+		</a>
+
+		<button type="button" class="logout_btn">로그아웃</button>
+	</div>
+
+
+
+<script>
+	$(".logout_btn").click(function(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.href='index.html'
+		}
+	});
+
+
+</script>
+
+
+
+<style>
+	#map { width: 100%; height: 250px; margin-top: 10px; }
+</style>
+
+
+<!-- ===========================미리보기 팝업============================ -->
+<div id="view_pop" class="pop">
+	<div class="black_bg"></div>
+
+	<div class="white_bg">
+		<div class="p_title">
+			<div class="pt_left vt_mid"></div>
+			<h2 id="type" class="p_h2 vt_mid">쇼룸</h2>
+			<div class="pt_right vt_mid">
+				<button type="button" class="close_btn">
+					<img src="img/close_btn.png" alt="닫기">
+				</button>
+			</div>
+		</div>
+
+		<div class="scroll_area">
+			<div class="thumb vt_mid">
+				<div class="grid">
+					<img id="bannerimg" src="img/eximg2.jpg" alt="배너" class="img">
+				</div>
+			</div>
+
+
+			<div class="store_profile">
+				<div class="vt_mid profile">
+					<div class="grid">
+						<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+					</div>
+				</div>
+				<div class="store_info vt_mid">
+				  <p id="basic1" class="st_title">제목입니당!</p>
+				  <span id="basic2" class="subcopy">서브카피입니당</span>
+				 </div>
+			 </div> <!--store_profile-->
+
+
+			 <div class="store_guide">
+				<p><img src="img/map.png" alt=""><span id="add1">경기도 부천시 원미구</span>&nbsp;<span id="add2">123번지</span></p>	
+				<p><img src="img/call.png" alt=""><span id="call">010-1234-5678</span></p>	
+			 </div> <!--store_guide-->
+
+			<div class="showroom_btm">
+                <div class="img_wrap">
+                    <img src="img/eximg2.jpg" alt="img" style="width: 100%">
+                </div>
+                <div class="text_wrap">
+                    텍스트 설명입니다.
+                </div>
+				
+			</div> <!--showroom_btm-->
+
+		</div>
+
+	</div>
+</div>
+<!-- ===========================미리보기 팝업============================ -->
+
+
+
+
+
+<section id="progress" class="contents">
+
+    
+
+	<article class="c_block">
+		<h2 class="title">진행 현황</h2>
+		<div class="cont">
+			<div class="white_box fs0">
+				<div class="all_pg">
+					<div class="ap_box vt_mid">
+						<h3 class="ap_top">진행중</h3>
+						<div class="ap_bot gm">2</div>
+					</div>
+					<i class="vt_mid bar"></i>
+					<div class="ap_box vt_mid">
+						<h3 class="ap_top">종료</h3>
+						<div class="ap_bot gm">1</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article class="c_block">
+		<div class="cont">
+
+			<div class="white_box fs0">
+				<div class="pg_block">
+					<div class="pg_top">
+						<div class="pt_left vt_mid">
+							<div class="cate vt_mid">쇼룸</div>
+							<div class="status vt_mid state">진행 중</div>
+						</div>
+						<div class="pt_right vt_mid">
+							<button type="button" class="pt_btn preview"
+							data-bannerimg="<?php echo htmlspecialchars($row['bannerimg']);?>"
+							data-typeyo="<?php echo htmlspecialchars($row['typeyo']);?>"
+							data-basic1="<?php echo htmlspecialchars($row['basic_1']);?>"
+							data-basic2="<?php echo htmlspecialchars($row['basic_2']);?>"
+							data-add1="<?php echo htmlspecialchars($row['adver_addr1']);?>"
+							data-add2="<?php echo htmlspecialchars($row['adver_addr2']);?>"
+							data-call="<?php echo htmlspecialchars($row['adver_call']);?>"
+							data-adtext1="<?php echo htmlspecialchars($row['adver_text01']);?>"
+							data-adtext2="<?php echo htmlspecialchars($row['adver_text02']);?>"
+							data-adtext3="<?php echo htmlspecialchars($row['adver_text03']);?>"
+							data-adtext4="<?php echo htmlspecialchars($row['adver_text04']);?>"
+							data-adtext5="<?php echo htmlspecialchars($row['adver_text05']);?>"
+							data-adimg1="<?php echo htmlspecialchars($row['adver_img01']);?>"
+							data-adimg2="<?php echo htmlspecialchars($row['adver_img02']);?>"
+							data-adimg3="<?php echo htmlspecialchars($row['adver_img03']);?>"
+							data-adimg4="<?php echo htmlspecialchars($row['adver_img04']);?>"
+							data-adimg5="<?php echo htmlspecialchars($row['adver_img05']);?>"
+							data-soonser="<?php echo htmlspecialchars($row['soonser']);?>"
+							
+							>
+							
+							미리보기</button>
+
+							<button type="button" class="pt_btn edit" onclick="location.href='upload_showroom_edit.html'">
+								<span class="vt_mid">관리</span>
+								<img src="img/arrow_right_sm.png" alt="바로가기" class="arrow vt_mid">
+							</button>
+
+						</div>
+					</div>
+
+
+					<div class="pg_bot">
+						<div class="pb_left vt_mid">
+							<div class="thumb vt_mid">
+								<div class="grid">
+									<img src="img/eximg2.jpg" alt="배너" class="img">
+								</div>
+							</div>
+
+							<div class="info vt_mid">
+								<div class="i_top">제목입니다!</div>
+								<div class="i_bot">서브카피입니당</div>
+							</div>
+						</div>
+
+						<div class="pb_right vt_mid">
+							<div class="gray_info">
+                                <div class="gray_info">
+                                    <div class="line">
+                                        <div class="line_left vt_mid">광고 기간</div>
+                                        <div class="line_right vt_mid">
+                                            2025-08-01 ~ 2025-08-31
+                                        </div>
+    
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left vt_mid">리워드</div>
+                                        <div class="line_right vt_mid">500C / 100명</div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left vt_mid">리워드 소진</div>
+                                        <div class="line_right vt_mid">100C / 500C</div>
+                                    </div>
+                                </div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <div class="white_box fs0">
+				<div class="pg_block">
+					<div class="pg_top">
+						<div class="pt_left vt_mid">
+							<div class="cate vt_mid">쇼룸</div>
+							<div class="status vt_mid state">진행 중</div>
+						</div>
+						<div class="pt_right vt_mid">
+							<button type="button" class="pt_btn preview"
+							data-bannerimg="<?php echo htmlspecialchars($row['bannerimg']);?>"
+							data-typeyo="<?php echo htmlspecialchars($row['typeyo']);?>"
+							data-basic1="<?php echo htmlspecialchars($row['basic_1']);?>"
+							data-basic2="<?php echo htmlspecialchars($row['basic_2']);?>"
+							data-add1="<?php echo htmlspecialchars($row['adver_addr1']);?>"
+							data-add2="<?php echo htmlspecialchars($row['adver_addr2']);?>"
+							data-call="<?php echo htmlspecialchars($row['adver_call']);?>"
+							data-adtext1="<?php echo htmlspecialchars($row['adver_text01']);?>"
+							data-adtext2="<?php echo htmlspecialchars($row['adver_text02']);?>"
+							data-adtext3="<?php echo htmlspecialchars($row['adver_text03']);?>"
+							data-adtext4="<?php echo htmlspecialchars($row['adver_text04']);?>"
+							data-adtext5="<?php echo htmlspecialchars($row['adver_text05']);?>"
+							data-adimg1="<?php echo htmlspecialchars($row['adver_img01']);?>"
+							data-adimg2="<?php echo htmlspecialchars($row['adver_img02']);?>"
+							data-adimg3="<?php echo htmlspecialchars($row['adver_img03']);?>"
+							data-adimg4="<?php echo htmlspecialchars($row['adver_img04']);?>"
+							data-adimg5="<?php echo htmlspecialchars($row['adver_img05']);?>"
+							data-soonser="<?php echo htmlspecialchars($row['soonser']);?>"
+							
+							>
+							
+							미리보기</button>
+
+							<button type="button" class="pt_btn edit" onclick="location.href='upload_showroom_edit.html'">
+								<span class="vt_mid">관리</span>
+								<img src="img/arrow_right_sm.png" alt="바로가기" class="arrow vt_mid">
+							</button>
+
+						</div>
+					</div>
+
+
+					<div class="pg_bot">
+						<div class="pb_left vt_mid">
+							<div class="thumb vt_mid">
+								<div class="grid">
+									<img src="img/eximg2.jpg" alt="배너" class="img">
+								</div>
+							</div>
+
+							<div class="info vt_mid">
+								<div class="i_top">제목입니다!</div>
+								<div class="i_bot">서브카피입니당</div>
+							</div>
+						</div>
+
+						<div class="pb_right vt_mid">
+							<div class="gray_info">
+                                <div class="gray_info">
+                                    <div class="line">
+                                        <div class="line_left vt_mid">광고 기간</div>
+                                        <div class="line_right vt_mid">
+                                            2025-08-01 ~ 2025-08-31
+                                        </div>
+    
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left vt_mid">리워드</div>
+                                        <div class="line_right vt_mid">500C / 100명</div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left vt_mid">리워드 소진</div>
+                                        <div class="line_right vt_mid">100C / 500C</div>
+                                    </div>
+                                </div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <div class="white_box fs0">
+				<div class="pg_block">
+					<div class="pg_top">
+						<div class="pt_left vt_mid">
+							<div class="cate vt_mid">쇼룸</div>
+							<div class="status vt_mid endd">종료</div>
+						</div>
+						<div class="pt_right vt_mid">
+							<button type="button" class="pt_btn preview"
+							data-bannerimg="<?php echo htmlspecialchars($row['bannerimg']);?>"
+							data-typeyo="<?php echo htmlspecialchars($row['typeyo']);?>"
+							data-basic1="<?php echo htmlspecialchars($row['basic_1']);?>"
+							data-basic2="<?php echo htmlspecialchars($row['basic_2']);?>"
+							data-add1="<?php echo htmlspecialchars($row['adver_addr1']);?>"
+							data-add2="<?php echo htmlspecialchars($row['adver_addr2']);?>"
+							data-call="<?php echo htmlspecialchars($row['adver_call']);?>"
+							data-adtext1="<?php echo htmlspecialchars($row['adver_text01']);?>"
+							data-adtext2="<?php echo htmlspecialchars($row['adver_text02']);?>"
+							data-adtext3="<?php echo htmlspecialchars($row['adver_text03']);?>"
+							data-adtext4="<?php echo htmlspecialchars($row['adver_text04']);?>"
+							data-adtext5="<?php echo htmlspecialchars($row['adver_text05']);?>"
+							data-adimg1="<?php echo htmlspecialchars($row['adver_img01']);?>"
+							data-adimg2="<?php echo htmlspecialchars($row['adver_img02']);?>"
+							data-adimg3="<?php echo htmlspecialchars($row['adver_img03']);?>"
+							data-adimg4="<?php echo htmlspecialchars($row['adver_img04']);?>"
+							data-adimg5="<?php echo htmlspecialchars($row['adver_img05']);?>"
+							data-soonser="<?php echo htmlspecialchars($row['soonser']);?>"
+							
+							>
+							
+							미리보기</button>
+
+							<button type="button" class="pt_btn edit" onclick="location.href='upload_showroom_edit.html'">
+								<span class="vt_mid">관리</span>
+								<img src="img/arrow_right_sm.png" alt="바로가기" class="arrow vt_mid">
+							</button>
+
+						</div>
+					</div>
+
+
+					<div class="pg_bot">
+						<div class="pb_left vt_mid">
+							<div class="thumb vt_mid">
+								<div class="grid">
+									<img src="img/eximg2.jpg" alt="배너" class="img">
+								</div>
+							</div>
+
+							<div class="info vt_mid">
+								<div class="i_top">제목입니다!</div>
+								<div class="i_bot">서브카피입니당</div>
+							</div>
+						</div>
+
+						<div class="pb_right vt_mid">
+							<div class="gray_info">
+                                <div class="gray_info">
+                                    <div class="line">
+                                        <div class="line_left vt_mid">광고 기간</div>
+                                        <div class="line_right vt_mid">
+                                            2025-08-01 ~ 2025-08-31
+                                        </div>
+    
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left vt_mid">리워드</div>
+                                        <div class="line_right vt_mid">500C / 100명</div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left vt_mid">리워드 소진</div>
+                                        <div class="line_right vt_mid">100C / 500C</div>
+                                    </div>
+                                </div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</article>
+</section>
+
+<script>
+  $(document).ready(function() {
+
+   // 미리보기 버튼 클릭 이벤트
+		$('.preview').on('click', function() {
+		  $('#view_pop').addClass('on');
+
+		});
+    
+
+
+  });
+</script>
+
+</section>
+
+
+<div class="go_top_area">
+    <button type="button" class="go_top">
+        <img src="img/go_top_black.png" alt="상단으로">
+    </button>
+</div>
+
+
+
+
+
+</body>
+</html>

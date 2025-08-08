@@ -1,0 +1,551 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HOOK 파트너스 페이지입니다.">
+	<meta property="og:title" content="HOOK 파트너스">
+	<meta property="og:description" content="마케팅의 시작 HOOK 파트너스">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>HOOK 파트너스</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+
+
+<body>
+<!-- 왼쪽메뉴 -->
+
+<section class="left_menu vt_top">
+
+	<h1 class="logo_area">
+		<div class="mb_side vt_mid">
+			<button type="button" class="open_menu">
+				<img src="img/ham.png" alt="메뉴 열기">
+			</button>
+		</div>
+
+		<a href="index.html" class="link_a">
+			<span class="vt_mid gm logo">HOOK</span>
+			<span class="vt_mid part">파트너스</span>
+		</a>
+
+		<div class="mb_side vt_mid">
+			<button type="button" class="go_home">
+				<img src="img/mb_home.png" alt="홈으로">
+			</button>
+		</div>
+	</h1>
+
+	<div class="mb_black_bg"></div>
+
+	<div class="mb_white_bg">
+
+		<div class="close_area">
+			<button type="button" class="close_btn">
+				<img src="img/close_white.png" alt="닫기">
+			</button>
+		</div>
+
+		<div class="nav_profile">
+
+			<a href="profile_edit.html" class="vt_mid">
+				<div class="nick"><strong class="strong">유저아이디유저아이디유저아이디</strong> 님</div>
+			</a>
+
+			<div class="logout_area">
+				<button type="button" class="logout_btn">로그아웃</button>
+			</div>
+		</div>
+
+
+		<nav class="nav">
+			<a href="showroom.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav1.png" alt="쇼룸 이용권"></div>
+				<div class="vt_mid menu">쇼룸 이용권</div>
+			</a>
+			<a href="credit.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav2.png" alt="크레딧 충전"></div>
+				<div class="vt_mid menu">크레딧 충전</div>
+			</a>
+			<a href="credit_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav3.png" alt="크레딧 내역"></div>
+				<div class="vt_mid menu">크레딧 내역</div>
+			</a>
+			<a href="order_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav4.png" alt="주문 내역"></div>
+				<div class="vt_mid menu">주문 내역</div>
+			</a>
+			<a href="upload_ad.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav5.png" alt="광고 등록"></div>
+				<div class="vt_mid menu">광고 등록</div>
+			</a>
+			<a href="progress.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav6.png" alt="진행 현황"></div>
+				<div class="vt_mid menu">진행 현황</div>
+			</a>
+		</nav>
+
+
+		<!-- <div class="btn_area">
+			<button type="button" class="logout_btn">로그아웃</button>
+		</div> -->
+
+	</div>
+</section>
+
+
+
+<!-- 상단프로필 -->
+
+<section class="right_con vt_top"> <!-- right_con 끝나는 태그는 tail.html에 있음 -->
+
+	<div class="top_bar">
+
+		<a href="index.html" class="go_home">
+			<img src="img/icon_home.png" alt="홈으로 가기">
+		</a>
+
+		<a href="profile_edit.html" class="profile_area">
+			<div class="vt_mid profile">
+				<div class="grid">
+					<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+				</div>
+			</div>
+			<div class="vt_mid nick">유저아이디유저아이디</div>
+			<div class="vt_mid last">님</div>
+		</a>
+
+		<button type="button" class="logout_btn">로그아웃</button>
+	</div>
+
+
+
+<script>
+	$(".logout_btn").click(function(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.href='index.html'
+		}
+	});
+
+
+</script>
+
+
+
+
+
+<style>
+	.crop_black_bg {width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); position: fixed; z-index:12; top:0; left:0; display:none;}
+	.prof_img_change{position: fixed;left: 50%;top: 0;background: #fff;width: 720px;height: 100%;z-index:13;
+	transform: translate(-50%);	display: none;}
+	.crop_close{position: absolute;left: 10px;top: 20px;border:none;width: 60px;height: 60px;}
+	.crop_ok{position: absolute;right: 10px;top: 20px;height: 60px;text-align: center;width: 110px;background: #3da4e4;
+	font-size: 26px;font-weight: bold;color: #fff;border:none;border-radius:5px}
+	.cr-slider-wrap{display: none;}
+	#upload-demo{position: absolute;left: 0;top: 50%;width: 100%;height: 500px;margin-top: -250px;}
+	.contents{margin-top: 20px;}
+	@media screen and (max-width: 720px) {
+	.contents{margin-top: 10px;}
+
+	.prof_img_change{left: 50%;top: 0;background: #fff;width: 100.0000%;height: 100%;
+	transform: translate(-50%);	display: none; border: 2px solid #ddd;}
+	.crop_close{left: 1.3889vw;top: 3.3889vw;border:none;width: 8.3333vw;height: 8.3333vw;}
+	.crop_ok{right: 1.3889vw;top: 3.3889vw;height: 8.3333vw;width: 15.2778vw;background: #3da4e4;
+	font-size: 3.6111vw;border:none;border-radius:0.6944vw}
+	.cr-slider-wrap{}
+	#upload-demo{left: 0;top: 50%;width: 100%;height: 500px;margin-top: -250px;}
+	
+	}
+
+</style>
+
+<link rel="stylesheet" href="croppie/croppie.css"/>
+<script src="croppie/croppie.min.js"></script>
+
+
+
+
+<!-- ============================프로필 변경 팝업========================== -->
+
+<div class="crop_black_bg"></div>
+
+<div class="prof_img_change">
+	<button type="button" class="crop_close"><img width="100%" src="img/close_btn.png" alt="닫기"></button>
+	<button type="button" class="crop_ok upload-result">확인</button>
+
+	<div id="upload-demo" class="upload-demo">
+
+	</div>
+</div>
+<!-- ============================프로필 변경 팝업 끝========================== -->
+
+
+
+
+
+
+<section id="index" class="contents">
+
+	<article class="c_block">
+		<h2 class="title">MY 통계</h2>
+		<div class="cont">
+			<div class="white_box status vt_top">
+				<div class="chart_area">
+				  <canvas id="myChart"></canvas>
+				</div>
+			</div>
+			<div class="white_box mypro vt_top">
+				<div class="p_block">
+					<form name="profile_change">
+						<input type="file" name="myprofile" id="myprofile" class="file">
+
+						<div class="rel">
+							<label for="myprofile" class="profile">
+								<div class="grid">	
+                                    <img src="img/eximg.jpg" id="myprofileImg" alt="" class="p_img">
+								</div>
+							</label>
+
+							<label for="myprofile" class="profile_btn">
+								<img src="img/profile_change.png" alt="이미지 변경">
+							</label>
+						</div>
+					</form>
+
+					<div class="nick">유저아이디유저아이디</div>
+				</div>
+
+
+
+
+				<div class="p_block">
+					<div class="vt_top m_block">
+						<div class="p_top">친구</div>
+						<div class="p_bot">10</div>
+					</div>
+					<div class="vt_top m_block">
+						<div class="p_top">관심쇼룸</div>
+						<div class="p_bot">15</div>
+					</div>
+					<div class="vt_top m_block">
+						<div class="p_top">스크랩</div>
+						<div class="p_bot">5</div>
+					</div>
+				</div>
+				<div class="p_block">
+					<a href="profile_edit.html" class="btn_common link_a">프로필 편집</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+	<article class="c_block">
+		<div class="cont">
+			<div class="half vt_top">
+				<h2 class="title"><a href="order_list.html" class="link"><span class="vt_mid">MY 쇼룸</span><span class="vt_mid arrow"><img src="img/arrow_right.png" alt="바로가기"></span></a></h2>
+				
+				<div class="white_box buybox show fs0">
+                    <div class="left vt_mid">
+                        <div class="icon_area"><img src="img/myicon1.png" alt="쇼룸 이용권"></div>
+                        <div class="mytitle">쇼룸 이용권</div>
+                        <div class="number"><a href="order_list.html" class="blue">10</a> 개</div>
+                    </div>
+                    <div class="right vt_mid">
+                        <a href="showroom.html" class="btns buy">이용권 구매하기</a>
+                        <a href="upload_showroom.html" class="btns upload">쇼룸 등록하기</a>
+                    </div>
+                </div>
+                
+			</div>
+
+			<div class="half vt_top">
+				<h2 class="title"><a href="credit_list.html" class="link"><span class="vt_mid">MY 크레딧</span><span class="vt_mid arrow"><img src="img/arrow_right.png" alt="바로가기"></span></a></h2>
+			
+				<div class="white_box buybox credit fs0">
+                    <div class="left vt_mid">
+                        <div class="icon_area"><img src="img/myicon2.png" alt="나의 크레딧"></div>
+                        <div class="mytitle">나의 크레딧</div>
+                        <div class="number"><a href="credit_list.html" class="blue">5000000</a> c</div>
+                    </div>
+                    <div class="right vt_mid">
+                        <a href="credit.html" class="btns buy">크레딧 충전하기</a>
+                        <a href="upload_reward.html" class="btns upload">리워드 등록하기</a>
+                    </div>
+                </div>
+                
+                
+                
+                <script>
+                $(document).ready(function() {
+                  $('.number a.blue').each(function() {
+                    var num = $(this).text();
+                    var formattedNum = num.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    $(this).text(formattedNum);
+                  });
+                });
+                </script>
+			</div>
+			
+		</div>
+	</article>
+
+
+	<article class="c_block">
+		<h2 class="title"><a href="progress.html" class="link"><span class="vt_mid">광고중인 컨텐츠</span><span class="vt_mid arrow"><img src="img/arrow_right.png" alt="바로가기"></span></a></h2>
+		<div class="cont">
+			<div class="white_box">
+				<div class="ad_wrap">
+
+					<div class="ad_box">
+						<div class="grid">
+							<img src="img/eximg2.jpg" alt="배너" class="adimg">
+						</div>
+
+						<a href="upload_showroom_edit.html" class="hover_wrap">
+							<p class="type">쇼룸</p>
+							<p class="title">쪼꼬미 애견카페</p>
+						</a>
+					</div>
+
+                    <div class="ad_box">
+						<div class="grid">
+							<img src="img/eximg2.jpg" alt="배너" class="adimg">
+						</div>
+
+						<a href="upload_showroom_edit.html" class="hover_wrap">
+							<p class="type">리워드</p>
+							<p class="title">쪼꼬미 애견카페</p>
+						</a>
+					</div>
+
+                    <div class="ad_box">
+						<div class="grid">
+							<img src="img/eximg2.jpg" alt="배너" class="adimg">
+						</div>
+
+						<a href="upload_showroom_edit.html" class="hover_wrap">
+							<p class="type">쇼룸</p>
+							<p class="title">쪼꼬미 애견카페</p>
+						</a>
+					</div>
+
+						<!-- <div class="no_list">
+							<div class="icon_wrap"><img src="img/no_icon.png" alt="내역이 없습니다."></div>
+							<p class="no_text">진행중인 광고가 없습니다.</p>
+						</div> -->
+					
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+
+
+//============================ 차트 =================================
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['06.30', '07.01', '07.02', '07.03', '07.04', '07.05', '07.06', '07.07'],
+	  
+      datasets: [{
+        label: '클릭 수',
+        data: [30, 45, 35, 55, 20, 25, 45, 23],
+		backgroundColor: "rgba(61, 164, 228, 1)",
+        borderWidth: 2,
+		borderColor: "rgba(61, 164, 228, 1)",
+		pointBackgroundColor: "rgba(61, 164, 228, 1)",
+        pointBorderColor: "rgba(61, 164, 228, 1)",
+		
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+		  min: 0,
+          max: 60
+        }
+      },
+	  plugins : {
+		legend : {
+			display: true,
+			align: 'end',
+			 labels: {
+				font: {
+					font: 14,
+				}
+			}
+		}
+	  },
+	  responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+
+
+    window.addEventListener('resize', () => {
+	    ctx.resize();
+	});
+
+//============================ 차트 끝 =================================
+
+
+
+
+
+  	var adWidth =  $('.ad_box').innerWidth();
+	$('.ad_box').css({'height': (adWidth * 0.6) + "px"});
+
+	$(window).resize(function(){
+		var adMoveWidth = $('.ad_box').innerWidth();
+		$('.ad_box').css({'height': (adMoveWidth * 0.6) + "px"});
+
+	});
+
+
+
+
+
+
+
+
+//======================== 프로필 사진 변경 ============================	
+	$("#upload_click").click(function(){
+	  $("#myprofile").click();
+	  
+	  
+	})
+
+	document.addEventListener("onDeviceReady", function (e) {
+	  
+	})
+
+
+	$(".crop_close").click(function(){
+		$(".prof_img_change").hide();
+		$(".crop_black_bg").hide();  //검정배경
+	})
+
+	$(".crop_black_bg").click(function(){
+		$(".prof_img_change").hide();
+		$(".crop_black_bg").hide();  //검정배경
+	})
+
+
+
+	var $uploadCrop;
+
+	function readFile(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			
+			reader.onload = function (e) {
+				$('#upload-demo').addClass('ready');
+				$('#upload-demo').show();
+				$uploadCrop.croppie('bind', {
+					url: e.target.result
+				}).then(function(){
+					//console.log('jQuery bind complete');
+				});
+				
+			}
+			
+			reader.readAsDataURL(input.files[0]);
+		}
+		else {
+			alert("Sorry - you're browser doesn't support the FileReader API");
+		}
+	}
+
+	var viewportSize = calculateViewportSize();
+	$uploadCrop = $('#upload-demo').croppie({		
+		viewport: {
+			width: viewportSize,
+			height: viewportSize,
+			type: 'circle'
+		},
+		enableExif: true
+	});
+
+	// 화면 크기에 맞는 viewport 크기 계산 함수
+	function calculateViewportSize() {    
+		return Math.min($(window).width()-30, 400); // 최대 300px로 제한
+	}
+
+
+
+	$('#myprofile').on('change', function () { 
+		readFile(this);
+		$(".prof_img_change").show(); 
+		$(".crop_black_bg").show();  //검정배경
+	});
+
+
+
+	$('.upload-result').on('click', function (ev) {
+		$uploadCrop.croppie('result', {
+			type: 'canvas',
+			size: 'original',
+			format: 'jpeg',
+			quality: 0.3
+		}).then(function (resp) {
+			console.log(resp);
+			$("#profile").attr('src',resp);
+			$("#myprofileImg").attr('src',resp);
+			$(".prof_img_change").hide();
+			$(".crop_black_bg").hide(); //검정배경
+			
+			// $.ajax({
+			// 	url: 'profile_img_up.html', // PHP 파일 경로
+			// 	type: 'POST',
+			// 	data: {
+			// 		image: resp // base64 이미지를 전송
+			// 	},
+			// 	success: function(response) {
+			// 		if ((typeof window.MintApp) != 'undefined') {
+			// 		  MintApp.toast("프로필이 변경되었습니다.",0.1)
+			// 		}
+			// 	},
+			// 	error: function() {
+			// 		console.log('이미지 업로드 실패');
+			// 	}
+			// });
+
+		});
+	});
+
+
+
+
+
+</script>
+
+</section>
+
+
+<div class="go_top_area">
+    <button type="button" class="go_top">
+        <img src="img/go_top_black.png" alt="상단으로">
+    </button>
+</div>
+
+
+
+
+
+</body>
+</html>

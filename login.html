@@ -1,0 +1,100 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HOOK 파트너스 페이지입니다.">
+	<meta property="og:title" content="HOOK 파트너스">
+	<meta property="og:description" content="마케팅의 시작 HOOK 파트너스">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>HOOK 파트너스</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+<style>
+	html, body {margin: 0; padding: 0; overflow: auto; -ms-overflow-style: none; scrollbar-width: none;  }
+	html::-webkit-scrollbar,
+	body::-webkit-scrollbar {display: none;}
+</style>
+
+<script>
+    $(document).ready(function(){
+        alert("이 프로젝트는 포트폴리오용 페이지입니다\n로그인 정보를 입력하지 않아도 로그인 버튼을 누르면 바로 이동할 수 있습니다.")
+    })
+</script>
+
+<body>
+
+<section id="login" class="form scroll-hidden">
+	<form name="login" action="" onsubmit="return flogin_submit(this);" method="post">
+	
+		<section class="form_box login">
+			<h1 class="top">
+				<img src="img/logo.png" alt="hook" class="logo">
+				<p class="t1 gm_bold">HOOK</p>
+				<p class="t2">파트너스</p>
+			</h1>
+
+			<div class="center">
+				<div class="idpw_wrap">
+
+					<div class="i_wrap">
+						<input type="text" name="mb_id"  required id="user_id" class="input" placeholder="이메일을 입력해주세요.">
+					</div>
+					<div class="i_wrap">
+						<input type="password" name="mb_password" required id="user_pw" class="input" placeholder="비밀번호를 입력해주세요.">
+
+						<div class="pw_btns">
+							<img src="img/icon_show.png" alt="비밀번호 보기" class="show on">
+							<img src="img/icon_hide.png" alt="비밀번호 보기" class="hide">
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="btn_area">
+					<button type="button" class="btn_common" onclick="location.href='index2.html'">로그인</button>
+				</div>
+
+
+				<div class="submenu_wrap">
+					<a href="find.html" class="submenu sb1 vt_mid">아이디ㆍ비밀번호 찾기</a>
+					<a href="join.html" class="submenu sb2 vt_mid">회원가입</a>
+				</div>
+			</div>
+
+			<div class="bot">
+
+				<div class="black_btn_area">
+					<a href="jregi.html" class="black_btn link_a">제휴사 계정으로 가입</a>
+				</div>
+
+				<div class="copyright">Copyright 2025. HOOK All right reserved.</div>
+
+			</div>
+		</section>
+	</form>
+</section>
+
+
+<script>
+// function flogin_submit(f)
+// {
+//      return true;
+// }
+</script>
+
+<!-- <div class="go_top_area">
+    <button type="button" class="go_top">
+        <img src="img/go_top_black.png" alt="상단으로">
+    </button>
+</div> -->
+
+
+</body>
+</html>

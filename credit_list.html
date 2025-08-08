@@ -1,0 +1,420 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HOOK 파트너스 페이지입니다.">
+	<meta property="og:title" content="HOOK 파트너스">
+	<meta property="og:description" content="마케팅의 시작 HOOK 파트너스">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>HOOK 파트너스</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+<style>
+	@media (max-width: 1000px) {
+		.right_con .contents {padding-bottom: 22.2222vw;}
+	}
+</style>
+
+
+
+<body>
+<!-- 왼쪽메뉴 -->
+
+<section class="left_menu vt_top">
+
+	<h1 class="logo_area">
+		<div class="mb_side vt_mid">
+			<button type="button" class="open_menu">
+				<img src="img/ham.png" alt="메뉴 열기">
+			</button>
+		</div>
+
+		<a href="index2.html" class="link_a">
+			<span class="vt_mid gm logo">HOOK</span>
+			<span class="vt_mid part">파트너스</span>
+		</a>
+
+		<div class="mb_side vt_mid">
+			<button type="button" class="go_home">
+				<img src="img/mb_home.png" alt="홈으로">
+			</button>
+		</div>
+	</h1>
+
+	<div class="mb_black_bg"></div>
+
+	<div class="mb_white_bg">
+
+		<div class="close_area">
+			<button type="button" class="close_btn">
+				<img src="img/close_white.png" alt="닫기">
+			</button>
+		</div>
+
+		<div class="nav_profile">
+
+			<a href="profile_edit.html" class="vt_mid">
+				<div class="nick"><strong class="strong">유저아이디유저아이디유저아이디</strong> 님</div>
+			</a>
+
+			<div class="logout_area">
+				<button type="button" class="logout_btn">로그아웃</button>
+			</div>
+		</div>
+
+
+		<nav class="nav">
+			<a href="showroom.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav1.png" alt="쇼룸 이용권"></div>
+				<div class="vt_mid menu">쇼룸 이용권</div>
+			</a>
+			<a href="credit.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav2.png" alt="크레딧 충전"></div>
+				<div class="vt_mid menu">크레딧 충전</div>
+			</a>
+			<a href="credit_list.html" class="nav_a on">
+				<div class="vt_mid icon"><img src="img/nav3_on.png" alt="크레딧 내역"></div>
+				<div class="vt_mid menu">크레딧 내역</div>
+			</a>
+			<a href="order_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav4.png" alt="주문 내역"></div>
+				<div class="vt_mid menu">주문 내역</div>
+			</a>
+			<a href="upload_ad.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav5.png" alt="광고 등록"></div>
+				<div class="vt_mid menu">광고 등록</div>
+			</a>
+			<a href="progress.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav6.png" alt="진행 현황"></div>
+				<div class="vt_mid menu">진행 현황</div>
+			</a>
+		</nav>
+
+
+		<!-- <div class="btn_area">
+			<button type="button" class="logout_btn">로그아웃</button>
+		</div> -->
+
+	</div>
+</section>
+
+
+
+<!-- 상단프로필 -->
+
+<section class="right_con vt_top"> <!-- right_con 끝나는 태그는 tail.html에 있음 -->
+
+	<div class="top_bar">
+
+		<a href="index2.html" class="go_home">
+			<img src="img/icon_home.png" alt="홈으로 가기">
+		</a>
+
+		<a href="profile_edit.html" class="profile_area">
+			<div class="vt_mid profile">
+				<div class="grid">
+					<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+				</div>
+			</div>
+			<div class="vt_mid nick">유저아이디유저아이디</div>
+			<div class="vt_mid last">님</div>
+		</a>
+
+		<button type="button" class="logout_btn">로그아웃</button>
+	</div>
+
+
+
+<script>
+	$(".logout_btn").click(function(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.href='index.html'
+		}
+	});
+
+
+</script>
+
+<section id="credit_list" class="contents">
+	<article class="c_block">
+		<h2 class="title">보유 크레딧</h2>
+		<div class="cont">
+			<div class="half vt_top">					
+				<div class="white_box buybox credit fs0">
+                    <div class="left vt_mid">
+                        <div class="icon_area"><img src="img/myicon2.png" alt="나의 크레딧"></div>
+                        <div class="mytitle">나의 크레딧</div>
+                        <div class="number"><a href="credit_list.html" class="blue">5000000</a> c</div>
+                    </div>
+                    <div class="right vt_mid">
+                        <a href="credit.html" class="btns buy">크레딧 충전하기</a>
+                        <a href="upload_reward.html" class="btns upload">리워드 등록하기</a>
+                    </div>
+                </div>
+                
+                
+                
+                <script>
+                $(document).ready(function() {
+                  $('.number a.blue').each(function() {
+                    var num = $(this).text();
+                    var formattedNum = num.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    $(this).text(formattedNum);
+                  });
+                });
+                </script>
+			</div>
+		</div>
+	</article>
+
+
+	<article class="c_block">
+		<h2 class="title">크레딧 내역</h2>
+		<div class="cont">
+			<div class="white_box filter">
+
+			<form name="filter" method="post">
+				<div class="ft_top">
+					<div class="ck_block vt_mid">
+						<input type="checkbox" name="all_ck" id="all_ck" class="ckbox" checked>
+						<label for="all_ck" class="ft_lab">전체</label>
+					</div>
+					<div class="ck_block vt_mid">
+						<input type="checkbox" name="credit_buy" id="credit_buy" class="ckbox item" checked>
+						<label for="credit_buy" class="ft_lab">구매</label>
+					</div>
+					<div class="ck_block vt_mid">
+						<input type="checkbox" name="credit_use" id="credit_use" class="ckbox item" checked>
+						<label for="credit_use" class="ft_lab">사용</label>
+					</div>
+				</div>
+				<div class="ft_bot">
+					<div class="fb_left vt_mid">
+						<div class="text vt_mid">기간</div>
+						<div class="date_wrap vt_mid">
+							<input type="date" name="start_date" id="start_date" class="date vt_mid">
+							<span class="gap vt_mid">-</span>
+							<input type="date" name="end_date" id="end_date" class="date vt_mid">
+						</div>
+					</div>
+					<div class="fb_right vt_mid">
+						<button type="button" class="btn_common">조회하기</button>
+					</div>
+				</div>
+
+			</form>
+
+			</div>
+
+		</div>
+		
+
+		<div class="cont mt_20">
+			<div class="white_box">
+				<div class="yes_item">
+					<div class="period">2025-06-08 ~ 2025-07-08 <!-- <span class="blue">(1일간)</span> --></div>
+
+					<div class="all_result">
+						<div class="ar_top"><span id="ssnum">1</span> 건</div>
+						<div class="ar_bot"><span id="hhnum">100,000</span> 원</div>
+					</div>					
+				</div>
+
+				<div class="white_box2">
+                    <div class="b_block">
+
+                        <div class="y_left vt_mid">
+                            <p class="name">크레딧 구매</p>
+                            <p class="sub">2025-08-08 12:00:00</p>
+                        </div>
+                        <div class="y_right vt_mid">
+                            <p class="price">50,000 c</p>
+                        </div>
+                    </div>
+				
+
+					
+				</div>
+			</div>
+		</div>
+
+
+	</article>
+</section>
+
+
+<script>
+
+$(".btn_common").click(function(){
+	
+	var mb_id = "<?php echo isset($_GET['mb_id']) ? $_GET['mb_id'] : $member['mb_id']; ?>";
+    const startDate = $('#start_date').val();
+    const endDate = $('#end_date').val();
+
+	if (startDate && endDate) {
+        $(".period").text(startDate + " ~ " + endDate);
+    } else {
+        $(".period").text("기간을 선택하세요");
+    }
+
+
+
+	var chek1='';
+
+	if($("#all_ck").prop('checked')==true ){
+		chek1='all';
+
+	}else if($("#credit_buy").prop('checked')==true ){
+		chek1='pl';
+	}else if($("#credit_use").prop('checked')==true ){
+		chek1='mi';
+	}else {
+		chek1='none';
+	}
+
+
+
+	$(".filter #all_ck").change(function(){
+		if($(this).is(":checked")) {
+			$("#credit_buy").prop("checked", true);
+			$("#credit_use").prop("checked", true);
+
+		}else {
+			$("#credit_buy").prop("checked", false);
+			$("#credit_use").prop("checked", false);
+		}
+	});
+
+
+
+	// $.ajax({
+    //     url: "./ajax_credit.html",
+    //     type: "POST",
+    //     data: {
+    //         'startDate': startDate,
+    //         'endDate': endDate,
+    //         'mb_id': mb_id,
+	// 		'jo' : chek1
+    //     },
+    //     success: function(response) {
+	// 			console.log('ajax_order2 응답:', response);
+    //         if (response.trim() === '') {
+    //             $('.white_box2').html('');
+	// 			//$(".empty_wrap").show();
+	// 			//$(".profit_inquiry").hide();
+    //         } else {
+    //             $('.white_box2').html(response);
+				
+	// 			//$(".empty_wrap").hide();
+	// 			//$(".profit_inquiry").show();
+				
+    //         }
+
+	// 		$.ajax({
+	// 			url: "./ajax_credit2.html",
+	// 			type: "POST",
+	// 			data: {
+	// 				'startDate': startDate,
+	// 				'endDate': endDate,
+	// 				'mb_id': mb_id,
+	// 				'jo' : chek1
+	// 			},
+	// 			success: function(response) {					
+	// 				const result = response.split("|");
+	// 				$("#ssnum").text(result[0]);
+	// 				$("#hhnum").text(result[1]);
+	// 			},
+	// 			error: function(xhr, status, error) {
+	// 				console.error("AJAX 오류 발생:", error);  // 콘솔에 오류 출력
+	// 			}
+	// 		});
+			
+    //     },
+    //     error: function(xhr, status, error) {
+    //         console.error("AJAX 오류 발생:", error);  // 콘솔에 오류 출력
+    //     }
+    // });
+
+
+
+});
+
+
+
+
+
+	$(document).ready(function () {
+		var today = new Date();
+
+		var endYear = today.getFullYear();
+		var endMonth = ('0' + (today.getMonth() + 1)).slice(-2);
+		var endDay = ('0' + today.getDate()).slice(-2);
+
+		var todayFormatted = `${endYear}-${endMonth}-${endDay}`;
+
+
+
+		var startDate = new Date();
+		startDate.setMonth(startDate.getMonth() - 1);
+
+		var startYear = startDate.getFullYear();
+		var startMonth = ('0' + (startDate.getMonth() + 1)).slice(-2);
+		var startDay = ('0' + startDate.getDate()).slice(-2);
+
+		var startFormatted = `${startYear}-${startMonth}-${startDay}`;
+
+		$('#start_date').val(startFormatted);
+		$('#end_date').val(todayFormatted);
+		$(".btn_common").click();
+	});
+
+
+
+//컨텐츠가 길어지면 왼쪽 메뉴도 같이 길어짐
+
+	function autoHeight() {
+
+		var move_leftH = $('.left_menu').innerHeight();
+		var move_conH = $('.right_con').innerHeight();
+		var move_winH = $(window).innerHeight();
+		var move_winW = $(window).innerWidth();
+
+		if (move_winW <= 1000) {
+			$('.left_menu').css({'height': 'auto'});
+		} else {
+			if (move_leftH < move_winH || move_conH < move_winH) {
+				$('.left_menu').css({'height': '100vh'});
+			}
+
+			if (move_leftH < move_conH || move_leftH > move_conH) {
+				$('.left_menu').css({'height': move_conH + 'px'});
+			}
+		}
+	}
+
+</script>
+
+
+
+
+</section>
+
+
+<div class="go_top_area">
+    <button type="button" class="go_top">
+        <img src="img/go_top_black.png" alt="상단으로">
+    </button>
+</div>
+
+
+
+
+
+</body>
+</html>

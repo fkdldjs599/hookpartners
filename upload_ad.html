@@ -1,0 +1,203 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HOOK 파트너스 페이지입니다.">
+	<meta property="og:title" content="HOOK 파트너스">
+	<meta property="og:description" content="마케팅의 시작 HOOK 파트너스">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>HOOK 파트너스</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+
+
+<body>
+<!-- 왼쪽메뉴 -->
+
+<section class="left_menu vt_top">
+
+	<h1 class="logo_area">
+		<div class="mb_side vt_mid">
+			<button type="button" class="open_menu">
+				<img src="img/ham.png" alt="메뉴 열기">
+			</button>
+		</div>
+
+		<a href="index2.html" class="link_a">
+			<span class="vt_mid gm logo">HOOK</span>
+			<span class="vt_mid part">파트너스</span>
+		</a>
+
+		<div class="mb_side vt_mid">
+			<button type="button" class="go_home">
+				<img src="img/mb_home.png" alt="홈으로">
+			</button>
+		</div>
+	</h1>
+
+	<div class="mb_black_bg"></div>
+
+	<div class="mb_white_bg">
+
+		<div class="close_area">
+			<button type="button" class="close_btn">
+				<img src="img/close_white.png" alt="닫기">
+			</button>
+		</div>
+
+		<div class="nav_profile">
+
+			<a href="profile_edit.html" class="vt_mid">
+				<div class="nick"><strong class="strong">유저아이디유저아이디유저아이디</strong> 님</div>
+			</a>
+
+			<div class="logout_area">
+				<button type="button" class="logout_btn">로그아웃</button>
+			</div>
+		</div>
+
+
+		<nav class="nav">
+			<a href="showroom.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav1.png" alt="쇼룸 이용권"></div>
+				<div class="vt_mid menu">쇼룸 이용권</div>
+			</a>
+			<a href="credit.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav2.png" alt="크레딧 충전"></div>
+				<div class="vt_mid menu">크레딧 충전</div>
+			</a>
+			<a href="credit_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav3.png" alt="크레딧 내역"></div>
+				<div class="vt_mid menu">크레딧 내역</div>
+			</a>
+			<a href="order_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav4.png" alt="주문 내역"></div>
+				<div class="vt_mid menu">주문 내역</div>
+			</a>
+			<a href="upload_ad.html" class="nav_a on">
+				<div class="vt_mid icon"><img src="img/nav5_on.png" alt="광고 등록"></div>
+				<div class="vt_mid menu">광고 등록</div>
+			</a>
+			<a href="progress.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav6.png" alt="진행 현황"></div>
+				<div class="vt_mid menu">진행 현황</div>
+			</a>
+		</nav>
+
+
+		<!-- <div class="btn_area">
+			<button type="button" class="logout_btn">로그아웃</button>
+		</div> -->
+
+	</div>
+</section>
+
+
+
+<!-- 상단프로필 -->
+
+<section class="right_con vt_top"> <!-- right_con 끝나는 태그는 tail.html에 있음 -->
+
+	<div class="top_bar">
+
+		<a href="index2.html" class="go_home">
+			<img src="img/icon_home.png" alt="홈으로 가기">
+		</a>
+
+		<a href="profile_edit.html" class="profile_area">
+			<div class="vt_mid profile">
+				<div class="grid">
+					<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+				</div>
+			</div>
+			<div class="vt_mid nick">유저아이디유저아이디</div>
+			<div class="vt_mid last">님</div>
+		</a>
+
+		<button type="button" class="logout_btn">로그아웃</button>
+	</div>
+
+
+
+<script>
+	$(".logout_btn").click(function(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.href='index.html'
+		}
+	});
+
+
+</script>
+
+
+<section id="upload_ad" class="contents">
+	<article class="c_block">
+		<h2 class="title">광고 등록</h2>
+		<div class="cont">
+			<div class="white_box upad fs0">
+				<div class="half vt_top">					
+					<h3 class="subtitle">보유 크레딧</h3>
+
+					<div class="mine">
+						<div class="vt_mid mine_num"><span class="credit">5000000</span> c</div>
+						<button type="button" class="buy_btn vt_mid" onclick="location.href='credit.html'">크레딧 충전</button>
+					</div>
+
+					<div class="btn_area">
+						<a href="upload_reward.html" class="btn_common link_a">리워드 광고 등록</a>
+					</div>
+				</div>
+				<div class="half vt_top">
+					<h3 class="subtitle">보유 쇼룸 이용권</h3>
+
+					<div class="mine">
+						<div class="vt_mid mine_num"><span class="number">10</span> 개</div>
+						<button type="button" class="buy_btn vt_mid" onclick="location.href='showroom.html'">이용권 구매</button>
+					</div>
+
+					<div class="btn_area">
+						<a href="upload_showroom.html" class="btn_common link_a">쇼룸 등록</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
+
+
+<script>
+
+	$(document).ready(function() {
+		var credit = $(".credit").text().replace(/,/g, '');
+		var creditNum = parseInt(credit, 10);
+
+		if (!isNaN(creditNum)) {
+			var formatted = creditNum.toLocaleString();
+			$(".credit").text(formatted);
+		}
+
+	});
+</script>
+
+
+</section>
+
+
+<div class="go_top_area">
+    <button type="button" class="go_top">
+        <img src="img/go_top_black.png" alt="상단으로">
+    </button>
+</div>
+
+
+
+
+
+</body>
+</html>

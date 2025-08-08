@@ -1,0 +1,364 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HOOK 파트너스 페이지입니다.">
+	<meta property="og:title" content="HOOK 파트너스">
+	<meta property="og:description" content="마케팅의 시작 HOOK 파트너스">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>HOOK 파트너스</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+
+
+<body>
+<!-- 왼쪽메뉴 -->
+
+<section class="left_menu vt_top">
+
+	<h1 class="logo_area">
+		<div class="mb_side vt_mid">
+			<button type="button" class="open_menu">
+				<img src="img/ham.png" alt="메뉴 열기">
+			</button>
+		</div>
+
+		<a href="index.html" class="link_a">
+			<span class="vt_mid gm logo">HOOK</span>
+			<span class="vt_mid part">파트너스</span>
+		</a>
+
+		<div class="mb_side vt_mid">
+			<button type="button" class="go_home">
+				<img src="img/mb_home.png" alt="홈으로">
+			</button>
+		</div>
+	</h1>
+
+	<div class="mb_black_bg"></div>
+
+	<div class="mb_white_bg">
+
+		<div class="close_area">
+			<button type="button" class="close_btn">
+				<img src="img/close_white.png" alt="닫기">
+			</button>
+		</div>
+
+		<div class="nav_profile">
+
+			<a href="profile_edit.html" class="vt_mid">
+				<div class="nick"><strong class="strong">유저아이디유저아이디유저아이디</strong> 님</div>
+			</a>
+
+			<div class="logout_area">
+				<button type="button" class="logout_btn">로그아웃</button>
+			</div>
+		</div>
+
+
+		<nav class="nav">
+			<a href="showroom.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav1.png" alt="쇼룸 이용권"></div>
+				<div class="vt_mid menu">쇼룸 이용권</div>
+			</a>
+			<a href="credit.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav2.png" alt="크레딧 충전"></div>
+				<div class="vt_mid menu">크레딧 충전</div>
+			</a>
+			<a href="credit_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav3.png" alt="크레딧 내역"></div>
+				<div class="vt_mid menu">크레딧 내역</div>
+			</a>
+			<a href="order_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav4.png" alt="주문 내역"></div>
+				<div class="vt_mid menu">주문 내역</div>
+			</a>
+			<a href="upload_ad.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav5.png" alt="광고 등록"></div>
+				<div class="vt_mid menu">광고 등록</div>
+			</a>
+			<a href="progress.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav6.png" alt="진행 현황"></div>
+				<div class="vt_mid menu">진행 현황</div>
+			</a>
+		</nav>
+
+
+		<!-- <div class="btn_area">
+			<button type="button" class="logout_btn">로그아웃</button>
+		</div> -->
+
+	</div>
+</section>
+
+<!-- 상단프로필 -->
+
+<section class="right_con vt_top"> <!-- right_con 끝나는 태그는 tail.html에 있음 -->
+
+	<div class="top_bar">
+
+		<a href="index.html" class="go_home">
+			<img src="img/icon_home.png" alt="홈으로 가기">
+		</a>
+
+		<a href="profile_edit.html" class="profile_area">
+			<div class="vt_mid profile">
+				<div class="grid">
+					<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+				</div>
+			</div>
+			<div class="vt_mid nick">유저아이디유저아이디</div>
+			<div class="vt_mid last">님</div>
+		</a>
+
+		<button type="button" class="logout_btn">로그아웃</button>
+	</div>
+
+
+
+<script>
+	$(".logout_btn").click(function(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.href='index.html'
+		}
+	});
+
+
+</script>
+
+
+
+<section id="phonechange" class="contents">
+	<article class="c_block">
+		<h2 class="title">핸드폰 번호 수정</h2>
+
+		<div class="cont">
+			<div class="white_box upad">
+
+			<form action="" method="post" onsubmit="return login_c()" class="phonechange">
+			<input type="hidden" name="w" value="">
+			<input type="hidden" name="mb_id" id="useridyo" value="<?php echo $member['mb_id']; ?>">
+
+				<div class="c_block">
+					<!--<h3 class="subtitle">핸드폰</h3>-->
+
+					<div class="f_wrap mt_0">
+						<div class="fs0">
+							<div class="f_half vt_top">
+								<h3 class="subtitle sub">핸드폰 번호 입력</h3>
+
+								<div class="f_wrap">
+									<div class="i_wrap">
+										<div class="line">
+											<input type="text" value="010-1234-5678" class="input wid" name="mb_hp" id="userPhone">
+											<button type="button" class="add_btn injbt">인증번호</button>
+										</div>
+										<div class="line phone_inputbox1" style="display:none;">
+											<input type="text" id="userPhone1" value="" class="input wid code_number" placeholder="인증번호를 입력해주세요">
+											<button type="button" class="add_btn injconf">확인</button>
+										</div>
+										<div class="line texton" style="display:none;">
+											<div class="subtext">인증이 완료되었습니다.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+
+
+					</div>
+				</div>
+
+
+
+				<div class="c_block">
+					<div class="f_btn_area">
+						<button type="submit" class="btn_common f_btn">핸드폰 번호 수정</button>
+					</div>
+				</div>
+
+
+			</form>
+			</div>
+		</div>
+	</article>
+</section>
+
+
+<script>
+
+var id_j_chk = 0; //아이디 확인
+var hp_chk = 0; //핸드폰 확인
+
+$(".injconf").click(function(){
+	var confyo = $("#userPhone1").val();
+    $(".code_number").prop('readonly',true);
+    $(".code_number").css('width','100%');
+    $(".injconf").hide();
+    $(".texton").show();
+
+	// if (confyo.length != 6) {
+	// 	alert('인증번호6자리를 입력해주세요');
+	// 	return false;
+	// }	
+	
+	// var code6s = $(".code_number").val();
+		
+	// if(code6s=='' || code6s.length!=6){
+	// 	alert('코드 6자리를 입력해주세요');
+	// 	return false;
+	// }
+	// $.ajax({ 
+	// 	url: "/certi_ex_re.php", 
+	// 	type: "POST", 
+	// 	cache: false,
+	// 	data:{code:code6s},
+	// 	success: function(data) {
+	// 		if(data=='100'){	
+	// 			hp_chk = 1;
+	// 			$(".code_number").prop('readonly',true);
+	// 			$(".code_number").css('width','100%');
+	// 			$(".injconf").hide();
+	// 			//$(".login_btn").show();
+
+	// 			//location.replace('/myprofile.php');
+	// 		}else if(data=='502'){
+	// 			alert('유효시간 3분이 만료된 코드입니다. 다시 진행해주세요.');
+	// 			location.href=location.href;					
+	// 		}else if(data=='200'){
+	// 			alert('코드 불일치 다시 입력해주세요');
+	// 		}
+
+	// 		$(".texton").show();
+	// 	},
+	// 	dataType:"html"
+	// });
+})
+
+$("#userPhone").on("input", function() {  
+  $(this).val($(this).val().replace(/[^0-9\-]/g, ""));
+});
+
+$("#userPhone1").on("input", function() {  
+   $(this).val($(this).val().replace(/[^0-9]/g, ""));
+});
+
+$(".injbt").click(function(){
+    $(".injbt").hide();
+    $("#userPhone").css('width','100%');
+    $("#userPhone").prop("readonly", true);
+	$("#userPhone").addClass("on");
+
+    $(".phone_inputbox1").show();
+    $("#userPhone1").focus();
+
+
+	//var telv = $("#userPhone").val();
+	//var phonePattern = /^(010|011|016|017|018|019)[-]?\d{3,4}[-]?\d{4}$/;
+
+	//if (phonePattern.test(telv)) {
+		
+		
+		
+		// $.ajax({ 
+		// 	url: "/certi_ex.php", 
+		// 	type: "POST", 
+		// 	cache: false,
+		// 	data:{'hphp':telv},
+		// 	success: function(data) {
+		// 		if(data=='ok'){
+		// 			//인증번호 갔다 치고
+		// 			$(".injbt").hide();
+		// 			$("#userPhone").css('width','100%');
+		// 			$("#userPhone").prop("readonly", true);
+		// 			$("#userPhone").addClass("on");
+					
+		// 			$(".phone_inputbox1").show();
+		// 			$("#userPhone1").focus();
+		// 			//$(".certi_boxhead>p").text('3분안에 코드를 입력해주세요');
+		// 		}else if(data=='111'){
+		// 			alert('재요청은 요청후 3분지나야 가능합니다.');
+		// 			return false;
+		// 		}else if(data=='404'){
+		// 			alert('알수없는 오류/n다시 요청해 주세요');
+		// 			location.replace(location.href);
+		// 		}else{
+		// 			alert(data);
+		// 			return false;
+		// 		} 
+		// 	},
+		// 	dataType:"html"
+		// });
+		
+		
+		
+		
+
+	// }else{
+	// 	alert("핸드폰 번호를 확인해주세요");
+	// 	return false;
+	// }
+})
+
+
+function login_c(){
+	 
+    
+	// if(!$("#userPhone").val()){
+	// 	alert('핸드폰을 번호를 입력해주세요');
+	// 	return false;
+	// }
+	// if(hp_chk==0){
+	// 	alert('핸드폰인증이 완료되지 않았습니다');
+	// 	return false;
+	// }
+
+
+	
+	// $.ajax({
+	// url: "/manager/mb_hp_change.php",
+	// type: "POST",
+	// data: {'mb_hp':$("#userPhone").val(),'mb_id':$("#useridyo").val()},
+	// success: function(msg){
+	// 		if(msg=='ok'){				
+	// 			location.replace('/manager/profile_edit.php');
+	// 		}else{
+	// 			alert(msg);
+	// 		}
+
+	//   }
+	// });
+	
+	
+	return false;
+}
+
+
+</script>
+
+
+</section>
+
+
+<div class="go_top_area">
+    <button type="button" class="go_top">
+        <img src="img/go_top_black.png" alt="상단으로">
+    </button>
+</div>
+
+
+
+
+
+</body>
+</html>

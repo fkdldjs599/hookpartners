@@ -1,0 +1,1326 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HOOK 파트너스 페이지입니다.">
+	<meta property="og:title" content="HOOK 파트너스">
+	<meta property="og:description" content="마케팅의 시작 HOOK 파트너스">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>HOOK 파트너스</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+
+
+<body>
+<!-- 왼쪽메뉴 -->
+
+<section class="left_menu vt_top">
+
+	<h1 class="logo_area">
+		<div class="mb_side vt_mid">
+			<button type="button" class="open_menu">
+				<img src="img/ham.png" alt="메뉴 열기">
+			</button>
+		</div>
+
+		<a href="index2.html" class="link_a">
+			<span class="vt_mid gm logo">HOOK</span>
+			<span class="vt_mid part">파트너스</span>
+		</a>
+
+		<div class="mb_side vt_mid">
+			<button type="button" class="go_home">
+				<img src="img/mb_home.png" alt="홈으로">
+			</button>
+		</div>
+	</h1>
+
+	<div class="mb_black_bg"></div>
+
+	<div class="mb_white_bg">
+
+		<div class="close_area">
+			<button type="button" class="close_btn">
+				<img src="img/close_white.png" alt="닫기">
+			</button>
+		</div>
+
+		<div class="nav_profile">
+
+			<a href="profile_edit.html" class="vt_mid">
+				<div class="nick"><strong class="strong">유저아이디유저아이디유저아이디</strong> 님</div>
+			</a>
+
+			<div class="logout_area">
+				<button type="button" class="logout_btn">로그아웃</button>
+			</div>
+		</div>
+
+
+		<nav class="nav">
+			<a href="showroom.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav1.png" alt="쇼룸 이용권"></div>
+				<div class="vt_mid menu">쇼룸 이용권</div>
+			</a>
+			<a href="credit.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav2.png" alt="크레딧 충전"></div>
+				<div class="vt_mid menu">크레딧 충전</div>
+			</a>
+			<a href="credit_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav3.png" alt="크레딧 내역"></div>
+				<div class="vt_mid menu">크레딧 내역</div>
+			</a>
+			<a href="order_list.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav4.png" alt="주문 내역"></div>
+				<div class="vt_mid menu">주문 내역</div>
+			</a>
+			<a href="upload_ad.html" class="nav_a on">
+				<div class="vt_mid icon"><img src="img/nav5_on.png" alt="광고 등록"></div>
+				<div class="vt_mid menu">광고 등록</div>
+			</a>
+			<a href="progress.html" class="nav_a">
+				<div class="vt_mid icon"><img src="img/nav6.png" alt="진행 현황"></div>
+				<div class="vt_mid menu">진행 현황</div>
+			</a>
+		</nav>
+
+
+		<!-- <div class="btn_area">
+			<button type="button" class="logout_btn">로그아웃</button>
+		</div> -->
+
+	</div>
+</section>
+
+
+
+<!-- 상단프로필 -->
+
+<section class="right_con vt_top"> <!-- right_con 끝나는 태그는 tail.html에 있음 -->
+
+	<div class="top_bar">
+
+		<a href="index2.html" class="go_home">
+			<img src="img/icon_home.png" alt="홈으로 가기">
+		</a>
+
+		<a href="profile_edit.html" class="profile_area">
+			<div class="vt_mid profile">
+				<div class="grid">
+					<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+				</div>
+			</div>
+			<div class="vt_mid nick">유저아이디유저아이디</div>
+			<div class="vt_mid last">님</div>
+		</a>
+
+		<button type="button" class="logout_btn">로그아웃</button>
+	</div>
+
+
+
+<script>
+	$(".logout_btn").click(function(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.href='index.html'
+		}
+	});
+
+
+</script>
+
+
+
+<style>
+	.crop_black_bg {width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); position: fixed; z-index:12; top:0; left:0; display:none;}
+
+	.prof_img_change{position: fixed;left: 50%;top: 0;background: #fff;width: 720px;height: 100%;z-index:13;
+	transform: translate(-50%);	display: none;}
+	.crop_close{position: absolute;left: 10px;top: 20px;border:none;width: 60px;height: 60px;}
+	.crop_ok{position: absolute;right: 10px;top: 20px;height: 60px;text-align: center;width: 110px;background: #3da4e4;
+	font-size: 26px;font-weight: bold;color: #fff;border:none;border-radius:5px}
+	.cr-slider-wrap{display: none;}
+	#upload-demo{position: absolute;left: 0;top: 50%;width: 100%;height: 500px;margin-top: -250px;}
+	
+	#up_go_img{position: fixed;left: 50%;top: 0;width: 720px;height: 100%;transform: translate(-50%);z-index:3;
+	background: #fff;display: none;}
+	#up_go_img>img{width: 100%;position: absolute;left: 50%;top:50%;transform: translate(-50%,-50%);}
+	
+
+	.photo_box>button{position: absolute;right: 10px;top: 10px;font-size: 30px;font-weight: bold;width:40px;height:40px;
+	background:red;color:#fff;border:none;border-radius:5px}
+
+
+	@media screen and (max-width: 720px) {
+	
+
+	#up_go_img{position: fixed;left: 50%;top: 0;width: 100%;height: 100%;transform: translate(-50%);z-index:3;
+	background: #fff;display: none;}
+	#up_go_img>img{width: 100%;position: absolute;left: 50%;top:50%;transform: translate(-50%,-50%);}
+
+
+	.prof_img_change{left: 50%;top: 0;background: #fff;width: 100.0000%;height: 100%;
+	transform: translate(-50%);	display: none;}
+	.crop_close{left: 1.3889vw;top: 3.3889vw;border:none;width: 8.3333vw;height: 8.3333vw;}
+	.crop_ok{right: 1.3889vw;top: 3.3889vw;height: 8.3333vw;width: 15.2778vw;background: #3da4e4;
+	font-size: 3.6111vw;border:none;border-radius:0.6944vw}
+	.cr-slider-wrap{}
+	
+	#upload-demo{left: 0;top: 50%;width: 100%;height: 65.1042vw;margin-top: -32.5521vw;}
+
+	
+
+	.photo_box>button{right: 1.6667vw;top: 1.6667vw;font-size: 5.0000vw;width:6.6667vw;height:6.6667vw;
+	background:red;border:none;border-radius:0.8333vw}
+
+	}
+
+	.photo_box{background-size:cover !important;position: relative;}
+	
+	.box01:after{display: none;}
+	
+
+	.img_box01{overflow-y:auto;display: block;}
+</style>
+
+<link rel="stylesheet" href="croppie/croppie.css">
+<script src="croppie/croppie.min.js"></script>
+
+<input type="hidden" id="sample2_postcode" placeholder="우편번호">
+<input type="hidden" id="sample2_extraAddress" placeholder="참고항목">
+
+<form action="new_adver_up.html" method="post" class="adver_form" enctype="multipart/form-data">
+<input type="hidden" value="" >
+
+<input type="hidden" name="loca" value="" class="locainput">
+<input type="hidden" name="img_1" value="<?php echo $ddd['bannerimg']?>" class="img_1 imgsub_0">
+<input type="hidden" name="img_2" value="<?php echo $ddd['adver_img01']?>" class="imgsub_1 sumsum">
+<input type="hidden" name="img_3" value="<?php echo $ddd['adver_img02']?>" class="imgsub_2 sumsum">
+<input type="hidden" name="img_4" value="<?php echo $ddd['adver_img03']?>" class="imgsub_3 sumsum">
+<input type="hidden" name="img_5" value="<?php echo $ddd['adver_img04']?>" class="imgsub_4 sumsum">
+<input type="hidden" name="img_6" value="<?php echo $ddd['adver_img05']?>" class="imgsub_5 sumsum">
+<input type="hidden" name="img_7" value="" class="imgsub_6 sumsum">
+<input type="hidden" name="img_8" value="" class="imgsub_7 sumsum">
+
+
+<div class="newad_wrap">
+
+
+
+<!-- 업로드될때 로딩되는 이미지
+ <div id="up_go_img">
+	<img src="/images/loadingg.gif" alt="">
+</div> -->
+
+<!-- ============================이미지 변경 팝업========================== -->
+<div class="crop_black_bg"></div>
+
+<div class="prof_img_change">
+	<button type="button" class="crop_close"><img width="100%" src="img/close_btn.png" alt="닫기"></button>
+	<button type="button" class="crop_ok upload-result">확인</button>
+
+	<div id="upload-demo" class="upload-demo">
+
+	</div>
+</div>
+<!-- ============================이미지 변경 팝업 끝========================== -->
+
+
+
+
+<section id="upload_reward" class="contents">
+	<article class="c_block">
+		<h2 class="title">
+            신규 광고 등록
+		</h2>
+		<div class="cont">
+			<div class="white_box upad">
+
+
+				<div class="c_block">
+					<h3 class="subtitle">배너 등록</h3>
+
+						<div class="f_wrap">
+
+						<div class="img_box01" id="upload_click"?>
+                            <div class="plusswrap">
+								<img src="img/icon_plus.png" alt="" class="plusicon">
+								<p>사진 첨부</p>
+							</div>
+								
+						</div>
+
+					</div><!--f_wrap-->
+				</div>
+
+				<div class="c_block">
+					<h3 class="subtitle">기본 정보</h3>
+
+					<div class="f_wrap">
+						<div class="f_half title">
+							<div class="p_area vt_mid">
+								<div class="profile">
+									<div class="grid">
+										<img src="img/eximg.jpg" id="profile" alt="" class="p_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="vt_mid i_wrap">
+								<input type="text" name="basic_1" value="" id="" class="input" placeholder="제목 입력">
+								<input type="text" name="basic_2" value="" id="" class="input" placeholder="서브카피">
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="c_block">
+					<div class="f_half vt_top block_mg">
+						<h3 class="subtitle sub">주소</h3>
+
+						<div class="f_wrap">
+							<div class="i_wrap">
+								<div class="line">
+									<input type="text" value="" name="adver_addr1" id="sample2_address" class="input readonly normal" readonly>
+									<button type="button" class="add_btn" onclick="sample2_execDaumPostcode()">주소검색</button>
+								</div>
+								<div class="line">
+									<input type="text" name="adver_addr2" class="input sub" value="" id="sample2_detailAddress" name="adver_addr2">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="f_half vt_top">
+						<h3 class="subtitle sub">전화번호</h3>
+
+						<div class="f_wrap">
+							<div class="i_wrap">
+								<div class="line">
+									<input type="number" value="" name="adver_call" id="user_phone" class="input" placeholder="‘-’ 생략">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="c_block">
+					<h3 class="subtitle">게시물 상세등록</h3>
+
+					<div class="f_wrap">
+
+						<div class="post_btntong">
+
+                            
+					    </div>
+
+					<div class="p_btn_area">
+						<button type="button" class="letter_addbtn add_btn">
+							<img src="img/icon_text.png" alt="텍스트 추가" class="icon vt_mid">
+							<span class="vt_mid txt">텍스트 추가</span>
+						</button>
+
+						<button type="button" class="photo_addbtn add_btn">
+							<img src="img/icon_photo.png" alt="사진 추가" class="icon vt_mid">
+							<span class="vt_mid txt">사진 추가</span>
+						</button>
+				    </div>
+
+					</div><!--f_wrap-->
+
+					</div><!--c_block-->
+
+
+
+				<div class="c_block">
+					<h3 class="subtitle">업종 설정</h3>
+
+					<input type="hidden" value="" name="category" id="selectedCategory" >
+
+
+					<div class="f_wrap">
+						<div class="cate_box">
+							<p data-category="음식점" onclick="setCategory(this)">음식점</p>
+							<p data-category="주점" onclick="setCategory(this)">주점</p>
+							<p data-category="미용" onclick="setCategory(this)">미용</p>
+							<p data-category="잡화" onclick="setCategory(this)">잡화</p>
+							<p data-category="숙박" onclick="setCategory(this)">숙박</p>
+							<p data-category="병원" onclick="setCategory(this)">병원</p>
+							<p data-category="여행" onclick="setCategory(this)">여행</p>
+							<p data-category="생활" onclick="setCategory(this)">생활</p>
+							<p data-category="렌탈" onclick="setCategory(this)">렌탈</p>
+							<p data-category="보험" onclick="setCategory(this)">보험</p>
+							<p data-category="헬스" onclick="setCategory(this)">헬스</p>
+							<p data-category="휴식" onclick="setCategory(this)">휴식</p>
+							<p data-category="요양" onclick="setCategory(this)">요양</p>
+							<p data-category="스포츠" onclick="setCategory(this)">스포츠</p>
+							<p data-category="레저" onclick="setCategory(this)">레저</p>
+							<p data-category="취미" onclick="setCategory(this)">취미</p>
+							<p data-category="먹거리" onclick="setCategory(this)">먹거리</p>
+							<p data-category="마사지" onclick="setCategory(this)">마사지</p>
+							<p data-category="기타" onclick="setCategory(this)">기타</p>
+						 </div>
+					 </div>
+				</div>
+
+
+
+				<div class="c_block">
+					<div class="f_btn_area">
+						<button type="button" class="regis btn_common f_btn">등록</button>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</article>
+</section>
+
+<input type="hidden" name="soonser" value="" class="data4">
+
+</form>
+
+
+<script>
+	$(".f_btn").click(function(){
+
+	alert("등록 되었습니다.")
+	location.href='progress.html'
+	});
+
+var my_credit_a = "<?php echo $member['mb_credit']?>";
+var setCredit = 0;
+
+
+
+$(".regis").click(function(){
+
+	
+	/* 게시물 메인 배너 검수*/
+	if(!$(".img_1").val()){
+		alert('메인배너를 삽입해주세요.');
+		return false;
+	}
+
+	if(!$('[name="basic_1"]').val()){
+		alert('메인카피를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="basic_2"]').val()){
+		alert('서브카피를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="adver_addr1"]').val()){
+		alert('주소를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="adver_addr2"]').val()){
+		alert('상세주소를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="adver_call"]').val()){
+		alert('전화번호를 입력해주세요.');
+		return false;
+	}
+
+	
+	
+	
+	
+	
+	
+	for (let i = 2; i <= 6; i++) {
+		const currentInput = $(`.img_${i}`); // 현재 input
+		const nextInput = $(`.img_${i + 1}`); // 다음 input
+
+		if (!currentInput.val() && nextInput.val()) { // 현재 값이 없고 다음 값이 있을 때
+			currentInput.val(nextInput.val()); // 다음 값을 현재 input에 설정
+			nextInput.val('')
+			//break; // 한 번만 수행하고 종료 (필요한 경우)
+		}
+	}
+
+
+	/* 게시물 메인 배너 검수*/
+
+	
+	
+	
+	
+	
+	
+	//또 무슨 조건??
+	
+	
+
+
+
+	/* 게시물 이미지 등록 검수 */
+	var g_img_gum=0;
+	var g_soo = 0;
+	$(".imgbox_wrap .img_box01").each(function(){		
+        g_soo = g_soo+1;
+		var id = $(this).attr("id"); // 현재 박스의 ID 가져오기
+        var boxNumber = id.replace("upload_click", ""); // 'upload_click' 제거
+		if(!$(".imgsub_"+boxNumber).val()){
+			g_img_gum=1;
+		}
+	})	
+	if(g_img_gum==1){
+		alert('갤러리 이미지 빈칸이 있습니다.\n삭제 및 삽입해주세요.');
+		return false;
+	}
+	if(g_soo==0){
+		alert('게시물 상세 이미지는 1개 이상 필수입니다.\n이미지추가 버튼을 눌러주세요.');
+		return false;
+	}
+	/* 게시물 이미지 등록 검수 */
+
+	/* 게시물 텍스트 검수 */
+	var t_img_gum=0;
+	var t_soo = 0;
+	$(".txtbox_wrap textarea").each(function(){		
+         t_soo = t_soo+1;
+		if(!$(this).val()){
+			t_img_gum=1;
+		}
+	})	
+	if(t_img_gum==1){
+		alert('갤러리 텍스트에 빈칸이 있습니다.\n삭제 및 삽입해주세요.');
+		return false;
+	}
+	/* 게시물 텍스트 검수 */
+
+	
+	/* 게시물 상세등록 순서 맞추기*/
+	//post_btntong
+	
+
+
+	// 결과 확인
+	//$(".data4").val(data4);
+
+
+
+	//$(".adver_form").submit();
+
+});
+
+
+
+$(".regis2").click(function(){
+
+	
+	/* 게시물 메인 배너 검수*/
+	if(!$(".img_1").val()){
+		alert('메인배너를 삽입해주세요.');
+		return false;
+	}
+
+	if(!$('[name="basic_1"]').val()){
+		alert('메인카피를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="basic_2"]').val()){
+		alert('서브카피를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="adver_addr1"]').val()){
+		alert('주소를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="adver_addr2"]').val()){
+		alert('상세주소를 입력해주세요.');
+		return false;
+	}
+
+	if(!$('[name="adver_call"]').val()){
+		alert('전화번호를 입력해주세요.');
+		return false;
+	}
+
+	
+	
+	
+	
+	
+	
+	for (let i = 2; i <= 6; i++) {
+		const currentInput = $(`.img_${i}`); // 현재 input
+		const nextInput = $(`.img_${i + 1}`); // 다음 input
+
+		if (!currentInput.val() && nextInput.val()) { // 현재 값이 없고 다음 값이 있을 때
+			currentInput.val(nextInput.val()); // 다음 값을 현재 input에 설정
+			nextInput.val('')
+			//break; // 한 번만 수행하고 종료 (필요한 경우)
+		}
+	}
+
+
+	/* 게시물 메인 배너 검수*/
+
+	
+	
+	
+	
+	
+	
+	//또 무슨 조건??
+	
+	
+
+
+
+	/* 게시물 이미지 등록 검수 */
+	var g_img_gum=0;
+	var g_soo = 0;
+	$(".imgbox_wrap .img_box01").each(function(){		
+        g_soo = g_soo+1;
+		var id = $(this).attr("id"); // 현재 박스의 ID 가져오기
+        var boxNumber = id.replace("upload_click", ""); // 'upload_click' 제거
+		if(!$(".imgsub_"+boxNumber).val()){
+			g_img_gum=1;
+		}
+	})	
+	if(g_img_gum==1){
+		alert('갤러리 이미지 빈칸이 있습니다.\n삭제 및 삽입해주세요.');
+		return false;
+	}
+	if(g_soo==0){
+		alert('게시물 상세 이미지는 1개 이상 필수입니다.\n이미지추가 버튼을 눌러주세요.');
+		return false;
+	}
+	/* 게시물 이미지 등록 검수 */
+
+	/* 게시물 텍스트 검수 */
+	var t_img_gum=0;
+	var t_soo = 0;
+	$(".txtbox_wrap textarea").each(function(){		
+         t_soo = t_soo+1;
+		if(!$(this).val()){
+			t_img_gum=1;
+		}
+	})	
+	if(t_img_gum==1){
+		alert('갤러리 텍스트에 빈칸이 있습니다.\n삭제 및 삽입해주세요.');
+		return false;
+	}
+	/* 게시물 텍스트 검수 */
+
+});
+
+
+
+// 버튼 클릭 시 처리
+    $('#rewordbtn').on('click', function() {
+        // 선택한 값 (select box)
+        var selectedValue = $('#setup').val().replace(/,/g, ''); // 쉼표 제거 후 문자열로 처리
+        selectedValue = parseFloat(selectedValue); // 숫자로 변환
+
+        // input box 값 (number input)
+        var inputValue = $('.input_box input[type="number"]').val(); // input[type="number"]의 값을 가져옴
+        inputValue = inputValue ? parseFloat(inputValue) : 0; // input 값이 있으면 숫자로 변환, 없으면 0
+
+		if (inputValue % 10 !== 0) {
+			alert("포인트는 10 단위로 입력해야 합니다.");
+			return; 
+		}
+
+
+        setCredit = inputValue * selectedValue;
+        $('.set_cd span').text(setCredit.toLocaleString() + 'c');
+        var saveCredit = parseFloat($('.save_cd span').text().replace(/[^0-9]/g, '')) || 0; // 숫자만 추출, 기본값 0
+        var remainingCredit = saveCredit - setCredit;
+        $('.change_cd span').text(remainingCredit.toLocaleString() + 'c');
+		
+		var ddd = parseFloat($('.change_cd span').text().replace(/[^0-9.-]/g, ''));
+		
+		if (ddd < 0) {
+			$('.redd').show();
+		}else{
+			$('.redd').hide();
+		}
+
+
+    });
+
+
+
+</script>
+
+<!-- <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
+<script>
+var maxKeywords = 10; // 최대 키워드 개수 제한
+
+// "전국" 선택 시 area02 숨기기 및 select 비활성화
+$('#area01').change(function() {
+    var selectedValue = $(this).val();
+
+    // "선택하세요"가 선택되면 해당 옵션 숨기기
+    if (selectedValue === "") {
+        $('#area01 option:first').show();  // "선택하세요" 보이기
+        $('#area02').hide();  // area02Box 숨기기
+        $('#area02').val('');  // area02 초기화
+    } else {
+        $('#area01 option:first').hide();  // "선택하세요" 숨기기
+        $('#area02').show();  // area02Box 표시
+    }
+
+    if (selectedValue === "전국") {
+        $('#area02').hide();  // "전국"일 경우 area02Box 숨기기
+        $('#area02').val('');  // area02 초기화
+    }
+
+    // area01이 변경되면 "전체" 선택 시 기존 키워드 삭제
+    var areaValue1 = $('#area01').val();
+    var areaValue2 = $('#area02').val();
+    
+    if (areaValue2 === "전체") {
+        var keywordText = areaValue1 + ' / 전체';
+        removeKeyword(keywordText);
+    }
+});
+
+// 키워드 추가 버튼 클릭 이벤트
+$('#addKeyword').click(function() {
+    var areaValue1 = $('#area01').val();
+    var areaValue2 = $('#area02').val();
+    var newKeywordText;
+
+    // "전국"이 선택된 경우 기존 키워드 제거 후 "전국"만 추가
+    if (areaValue1 === "전국" && keywordCount < maxKeywords) {
+        // 이미 "전국"이 선택된 키워드가 있는지 확인
+        if (!isKeywordExists(areaValue1)) {
+            // 기존 키워드 제거 및 키워드 개수 초기화
+            $('.hidden_box').empty();
+            keywordCount = 0;
+
+            newKeywordText = areaValue1;
+
+            var newKeyword = $( 
+                '<div class="word vt_mid" style="display:none;">' +
+                    '<p class="vt_mid">' + newKeywordText + '</p>' +
+                    '<a href="javascript:;" class="close"><img src="img/delete_btn.png" alt=""></a>' +
+                '</div>'
+            );
+
+            $('.hidden_box').append(newKeyword);
+            newKeyword.show();
+            keywordCount++;
+
+            // "전국"이 선택된 경우 다른 선택 비활성화
+            $('#area01').prop('disabled', true);
+            $('#area02').prop('disabled', true);
+
+            // input에 선택된 지역 설정
+            $(".locainput").val(newKeywordText); // 입력 필드에 값 설정
+
+        }
+
+    // 일반 지역 선택 시
+    } else if (areaValue1 && areaValue2 && keywordCount < maxKeywords) {
+        newKeywordText = areaValue1 + '-' + areaValue2;
+
+        // areaValue1 값에 대한 "전체"가 존재하는지 확인
+        var existingKeywordText = areaValue1 + ' / 전체';
+        if (isKeywordExists(existingKeywordText)) {
+            // "전체"가 이미 있는 경우 해당 키워드를 삭제
+            removeKeyword(existingKeywordText);  // isKeywordExists와 removeKeyword는 기존에 정의된 함수로 가정
+        }
+
+        // #area01 값이 동일하고, #area02 값이 "전체"일 경우
+        if (areaValue2 === "전체") {
+            // 기존에 해당하는 키워드에서 #area01 값이 동일하고 "전체 외" 키워드를 삭제
+            var existingKeywords = $('.hidden_box .word p');
+            existingKeywords.each(function() {
+                var existingKeywordText = $(this).text();
+                if (existingKeywordText.indexOf(areaValue1) === 0 && existingKeywordText.indexOf("전체") === -1) {
+                    // 해당하는 "전체 외" 키워드를 삭제
+                    removeKeyword(existingKeywordText);
+                }
+            });
+        } else {
+            // #area01 값이 동일하고, #area02 값이 "전체"인 키워드가 이미 있을 경우, 해당 키워드를 삭제
+            var existingKeywords = $('.hidden_box .word p');
+            existingKeywords.each(function() {
+                var existingKeywordText = $(this).text();
+                if (existingKeywordText.indexOf(areaValue1) === 0 && existingKeywordText.indexOf("전체") !== -1) {
+                    // 기존 "전체" 키워드를 삭제
+                    removeKeyword(existingKeywordText);
+                }
+            });
+        }
+
+        // 기존 키워드와 중복되지 않는지 확인
+        if (!isKeywordExists(newKeywordText)) {
+            var newKeyword = $( 
+                '<div class="word vt_mid" style="display:none;">' +
+                    '<p class="vt_mid">' + newKeywordText + '</p>' +
+                    '<a href="javascript:;" class="close"><img src="img/delete_btn.png" alt=""></a>' +
+                '</div>'
+            );
+
+            $('.hidden_box').append(newKeyword);
+            newKeyword.show();
+            keywordCount++;
+
+            // 닫기 버튼 이벤트 추가
+            newKeyword.find('.close').click(function() {
+                $(this).closest('.word').hide(0, function() {
+                    $(this).remove();
+                    keywordCount--;
+                    // 값 제거 시에도 input 값 업데이트
+                    var remainingKeywords = $(".hidden_box .word p").map(function() {
+                        return $(this).text();
+                    }).get().join(", ");
+                    $(".locainput").val(remainingKeywords); // 업데이트된 값 설정
+                });
+            });
+
+            // input에 선택된 지역 설정
+            var existingKeywords = $(".hidden_box .word p").map(function() {
+                return $(this).text();
+            }).get().join(", ");
+            $(".locainput").val(existingKeywords); // 업데이트된 값 설정
+
+        } else {
+            alert("이미 선택된 지역입니다.");
+        }
+    } else if (keywordCount >= maxKeywords) {
+        alert("최대 10곳까지 선택 가능합니다.");
+    } else {
+        alert("옵션을 선택하세요.");
+    }
+});
+
+
+
+
+$('body').on('click','.word .close',function() {
+	$(this).closest('.word').hide(0, function() {
+		$(this).remove();
+		keywordCount--;
+
+		// "전국"이 삭제되면 선택 박스 다시 활성화
+		$('#area01').prop('disabled', false);
+		$('#area02').prop('disabled', false);
+		$('#area01').val(''); // 초기화
+		$('#area02').val('');
+		$('#area02').hide(); // area02Box 숨김
+	});
+});
+
+
+
+
+// 페이지 로드 시 초기 설정
+$(document).ready(function() {
+    $('#area02').hide();  // 초기에는 area02Box 숨김 상태로 설정
+    $('#area01 option:first').show(); // "선택하세요" 옵션을 처음에는 보이게 설정
+});
+
+// 중복된 키워드가 있는지 확인하는 함수
+function isKeywordExists(keywordText) {
+    var exists = false;
+    $('.hidden_box .word p').each(function() {
+        if ($(this).text() === keywordText) {
+            exists = true;
+            return false; // 중복이 있으면 루프를 종료
+        }
+    });
+    return exists;
+}
+
+// 키워드를 삭제하는 함수
+function removeKeyword(keywordText) {
+    $('.hidden_box .word p').each(function() {
+        if ($(this).text() === keywordText) {
+            $(this).closest('.word').hide(0, function() {
+                $(this).remove();
+                keywordCount--;
+            });
+            return false; // 삭제 후 루프 종료
+        }
+    });
+};
+
+ 
+
+$('.area .select_box').click(function() {
+    $(this).toggleClass('arrow-changed');
+});
+
+
+$('.setup_box .select_box').on('click', function() {
+        $(this).toggleClass('arrow-changed');
+});
+
+    // 셀렉트 박스가 열린 상태 (focus)
+$('#setup').on('focus', function() {});
+$('#area01').on('focus', function() {});
+$('#area02').on('focus', function() {});
+
+    // 셀렉트 박스가 닫힌 상태 (blur)
+$('#setup').on('blur', function() {});
+$('#area01').on('blur', function() {});
+$('#area02').on('blur', function() {});
+
+    // 셀렉트 박스 옵션이 선택되었을 때 (change)
+$('#setup').on('change', function() {
+        var selectedValue = $(this).val();});
+$('#area01').on('change', function() {
+        var selectedValue = $(this).val();});
+$('#area02').on('change', function() {
+        var selectedValue = $(this).val();});
+
+    // select 박스가 열리고 닫히는 상태를 정확히 감지하기 위해
+    // blur가 호출되었을 때만 class를 제거하여 상태를 업데이트
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.select_box').length) {
+            // 외부를 클릭한 경우, 셀렉트 박스를 닫을 때
+            $('.select_box').removeClass('arrow-changed');
+        }
+    });
+
+$('.cate_box p').click(function(){
+	$('.cate_box p').removeClass('on');
+	$(this).addClass('on');
+});
+
+
+
+
+
+</script>
+
+<!-- <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
+<script>
+
+
+// 파일 읽기 및 크롭 처리 함수
+function readFile(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#upload-demo').addClass('ready').show();
+            $uploadCrop.croppie('bind', {
+                url: e.target.result
+            });
+        };
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        alert("Sorry - your browser doesn't support the FileReader API");
+    }
+}
+
+function readFile1(eventy,idss){
+
+	function gg(eventy) {
+	 
+	var input = eventy.target;
+
+	
+
+
+	var reader = new FileReader();
+
+	reader.onload = function(){
+
+	  var dataURL = reader.result;
+		//alert(idss);
+	  
+	  $("#upload_click" + idss).find("img, p").remove();
+	  //$("#upload_click"+idss).append('<img src="'+dataURL+'" width="100%" />';
+	  $("#upload_click" + idss).append('<img src="' + dataURL + '" width="100%" />');
+		
+      $(".imgsub_"+idss).val(dataURL);
+	  //output.css = dataURL;
+
+	};
+
+	reader.readAsDataURL(input.files[0]);
+	
+    
+	
+
+
+	}gg(eventy);
+
+	
+
+
+}
+
+
+// 크롭 설정 및 크기 계산
+function calculateViewportSize() {
+    return Math.min($(window).width(), 768);
+}
+
+var viewportSize = calculateViewportSize();
+var viewportSizeh = Math.round(viewportSize * (9 / 16));
+var $uploadCrop = $('#upload-demo').croppie({
+    viewport: {
+        width: viewportSize,
+        height: viewportSizeh,
+        type: 'square'
+    },
+    enableExif: true
+});
+
+// 파일 선택 후 크롭 이미지 보여주기
+$(document).on('change', "input[id='upload']", function () {
+    readFile(this); // 파일 처리 함수 호출
+    $(".prof_img_change").show();
+	$(".crop_black_bg").show();  //검정배경
+    $(this).val(''); // 파일 입력 초기화
+});
+
+/*
+$(document).on('change', "input[id='upload1'],input[id='upload2'],input[id='upload3'],input[id='upload4'],input[id='upload5']", function () {
+    
+	var idss = $(this).attr("id"); // 현재 박스의 ID 가져오기
+	var boxNumber = idss.replace("upload", ""); // 'upload_click' 제거
+	readFile1(this,boxNumber); // 파일 처리 함수 호출
+    //$(".prof_img_change").show();
+    $(this).val(''); // 파일 입력 초기화
+});
+*/
+
+
+
+// 이미지 크롭 후 배경 이미지 설정
+$('.upload-result').on('click', function () {
+    $uploadCrop.croppie('result', {
+        type: 'canvas',
+		size: 'original',
+        format: 'jpeg',
+		quality: 0.3
+    }).then(function (resp) {
+        const $activeBox = $("[id^='upload_click'].active"); // 현재 active인 박스 선택
+        const id = $activeBox.attr("id"); // 현재 박스의 ID 가져오기
+        const boxNumber = id.replace("upload_click", ""); // 'upload_click' 제거
+		
+		if ($activeBox.length) {
+            $activeBox.css({
+                "background": "url(" + resp + ") no-repeat center",
+                "background-size": "cover"
+            });
+	
+            $activeBox.find("img, p").hide(); // 기본 이미지와 텍스트 숨기기
+
+            if ($activeBox.find(".button-wrapper").length === 0) {
+                $activeBox.append('<div class="button-wrapper"><button type="button" class="remove-btn">X</button></div>');
+            }
+			if(boxNumber==""){
+				$(".img_1").val(resp);
+			}else{
+				var xx = Number(boxNumber);
+				$(".imgsub_"+xx).val(resp);	
+			}
+			//alert($(".img_"+xx).val());
+			
+		}
+
+        $(".prof_img_change").hide(); // 크롭 창 숨기기
+		$(".crop_black_bg").hide();  //검정배경
+
+    });
+});
+
+// 업로드 클릭 이벤트를 각각의 박스에 맞게 처리
+$(document).on("click", "[id='upload_click']", function (event) {
+    if (!$(event.target).hasClass("remove-btn")) {
+        const clickedId = $(this).attr("id"); // 클릭된 ID 가져오기
+
+        // 클릭한 박스를 active로 설정하고, 다른 박스의 active 제거
+        $("[id^='upload_click']").removeClass("active"); // 모든 박스의 active 제거
+        $(this).addClass("active"); // 현재 박스만 active
+
+        // 파일 입력 ID 생성 및 트리거
+        const inputId = clickedId.replace("upload_click", "upload");
+        if ($(`#${inputId}`).length === 0) {
+            const newInput = `<input type="file" name="${inputId}" id="${inputId}" style="display:none;" />`;
+            $(".adver_form").append(newInput);		
+			
+        }
+
+        $(`#${inputId}`).click(); // 파일 선택창 열기
+    }
+});
+
+$(document).on("click", "[id='upload_click1'] , [id='upload_click2'] ,[id='upload_click3'],[id='upload_click4'],[id='upload_click5']", function (event) {
+    if (!$(event.target).hasClass("remove-btn")) {
+        const clickedId = $(this).attr("id"); // 클릭된 ID 가져오기
+
+        // 클릭한 박스를 active로 설정하고, 다른 박스의 active 제거
+        $("[id^='upload_click']").removeClass("active"); // 모든 박스의 active 제거
+        $(this).addClass("active"); // 현재 박스만 active
+
+        // 파일 입력 ID 생성 및 트리거
+        const inputId = clickedId.replace("upload_click", "upload");
+		const inputId4 = clickedId.replace("upload_click", "");
+        if ($(`#${inputId}`).length === 0) {
+            const newInput = `<input type="file" onchange="readFile1(event,${inputId4})" name="${inputId}" id="${inputId}" style="display:none;" />`;
+            $(".adver_form").append(newInput);		
+			
+        }
+
+        $(`#${inputId}`).click(); // 파일 선택창 열기
+    }
+});
+
+// 삭제 버튼 클릭 처리
+$(document).on("click", ".remove-btn", function (event) {
+    event.stopPropagation(); // 클릭 이벤트 전파 방지
+
+    const $parent = $(this).closest("[id^='upload_click']"); // 해당 박스 찾기
+    $parent.css("background", ""); // 배경 초기화
+    $parent.find("img, p").show(); // 기본 이미지와 텍스트 표시
+    $parent.find(".button-wrapper").remove(); // X 버튼 제거
+	
+	var inputId = $parent.attr("id").replace("upload_click", "");
+	if(inputId==""){
+		inputId = 0;
+	}
+	$(".imgsub_"+inputId).val('');
+});
+
+	$(".crop_close").click(function(){
+		$(".prof_img_change").hide();
+		$(".crop_black_bg").hide();  //검정배경
+	})
+
+	$(".crop_black_bg").click(function(){
+		$(".prof_img_change").hide();
+		$(".crop_black_bg").hide();  //검정배경
+	})
+
+// 이미지 삭제 버튼 처리
+$(document).on("click", ".imgbox_btn", function () {
+    if (confirm("삭제하시겠습니까?")) {
+        const $parentWrap = $(this).closest(".imgbox_wrap"); // 부모 imgbox_wrap 찾기
+		const inputId = $parentWrap.find("[id^='upload_click']").attr("id").replace("upload_click", "upload");
+        var inputIdsoo = $parentWrap.find("[id^='upload_click']").attr("id").replace("upload_click", "");
+		if ($parentWrap.length) {
+            $parentWrap.remove(); // 부모 요소 삭제
+			 $(`#${inputId}`).remove(); // 해당하는 input[type="file"] 요소 삭제
+			
+			//alert(inputIdsoo);
+			 $(".imgsub_"+inputIdsoo).val('');
+			/*let dododo = [];
+			$(".sumsum").each(function() {
+				let value = $(this).val();
+				if (value) dododo.push(value);
+			});
+			
+
+			console.log(dododo);*/
+			var dosirasol = 1;
+			
+			
+			
+			$('.imgbox_wrap .img_box01').each(function(){
+				$(this).attr('id','upload_click'+dosirasol);
+				dosirasol = dosirasol+1;
+				//$(".")
+			})
+
+			for (let i = 1; i <= 5; i++) {
+				var currentInput = $(`.imgsub_${i}`); // 현재 input
+				var nextInput = $(`.imgsub_${i + 1}`); // 다음 input
+				
+				if (!currentInput.val() && nextInput.val()) { // 현재 값이 없고 다음 값이 있을 때
+					currentInput.val(nextInput.val()); // 다음 값을 현재 input에 설정
+					//alert();
+					nextInput.val('');
+					//break; // 한 번만 수행하고 종료 (필요한 경우)
+				}
+			}
+			 
+        }
+    }
+});
+
+// 텍스트 삭제 버튼 처리
+$(document).on("click", ".txtbox_btn", function () {
+    if (confirm("삭제하시겠습니까?")) {
+        const $parentWrap = $(this).closest(".txtbox_wrap"); 
+        if ($parentWrap.length) {
+            $parentWrap.remove(); 
+			var dosirasol = 1;
+			$('.txtbox_wrap textarea').each(function(){
+				$(this).attr('name','adver_text0'+dosirasol);
+				dosirasol = dosirasol+1;
+			})
+        }
+    }
+});
+
+
+// 초기 카운터 설정
+let uploadClickCounter = 0; // 사진 첨부 버튼에 대한 카운터
+let uploadClickCounter1 = 0; // 텍스트 추가 버튼에 대한 카운터
+
+
+
+// 사진 첨부 버튼 클릭 시 새 이미지 박스 추가
+$('.photo_addbtn').on('click', function () {
+	// imgbox_wrap 개수 확인
+	var imgBoxCount = $('.imgbox_wrap').length;
+ 
+	if (imgBoxCount >= 5) {
+		alert("최대 5개까지만 가능합니다.");
+	} else {
+		uploadClickCounter = imgBoxCount+1;
+		
+		var dosirasol = 1;
+		$('.imgbox_wrap .img_box01').each(function(){
+			$(this).attr('id','upload_click'+dosirasol);
+			dosirasol = dosirasol+1;
+		})
+
+		const newPostbox = `
+			<div class="imgbox_wrap">
+				<div class="img_box01" id="upload_click${uploadClickCounter}">
+				<div class="plusswrap">
+					<img src="img/icon_plus.png" alt="" class="plusicon">
+					<p>사진 첨부</p>
+				</div>
+				</div>
+				<div class="p_btn_area">
+					<div class="box_btn imgbox_btn">
+						<img src="img/icon_delete.png" alt="">삭제
+					</div>	
+				</div>
+			</div>`;
+		$('.post_btntong').append(newPostbox);
+	}
+});
+
+$('.letter_addbtn').on('click', function () {
+	var txtBoxCount = $('.txtbox_wrap').length;
+
+	//alert(txtBoxCount+1);
+	if (txtBoxCount >= 5) {
+		alert("최대 5개까지만 가능합니다.");
+		return;
+	}
+
+	 const paddedNumber = (txtBoxCount + 1).toString().padStart(2, '0');
+	const uniqueName = `adver_text${paddedNumber}`;
+
+	
+	if(txtBoxCount>0){
+		var dosirasol = 1;
+		$('.txtbox_wrap textarea').each(function(){
+			$(this).attr('name','adver_text0'+dosirasol);
+			dosirasol = dosirasol+1;
+		})
+	}
+
+
+	const newPostbox = `
+		<div class="txtbox_wrap">
+			<div class="txt_box">
+				<textarea name="${uniqueName}" cols="10" rows="6" placeholder="글쓰기" class="textarea"></textarea>
+			</div>
+			<div class="p_btn_area">
+				<div class="box_btn txtbox_btn">
+					<img src="img/icon_delete.png" alt="">삭제
+				</div>	
+			</div>
+
+		</div>`;
+	$('.post_btntong').append(newPostbox);
+});
+
+
+
+// idx 값이 있을 때
+var urlParams = new URLSearchParams(window.location.search);
+var idx = urlParams.get('idx'); // idx 값을 가져옴
+
+if(idx){
+
+}else{
+	$('.photo_addbtn').click();
+    $('.letter_addbtn').click();
+}
+
+
+
+
+
+
+
+//컨텐츠가 길어지면 왼쪽 메뉴도 같이 길어짐
+
+	$(window).scroll(function(){
+		var move_leftH = $('.left_menu').innerHeight();
+		var move_conH = $('.right_con').innerHeight();
+		var move_winH = $(window).innerHeight();
+		var move_winW = $(window).innerWidth();
+
+		if(move_winW <= 1000) {
+			$('.left_menu').css({'height': 'auto'});
+		
+		}else {
+
+			if (move_leftH < move_winH || move_conH < move_winH) {
+				$('.left_menu').css({'height': '100vh'});
+			}
+
+			if(move_leftH < move_conH) {
+				$('.left_menu').css({'height': move_conH + 'px'});
+
+			}
+
+			if(move_leftH > move_conH) {
+				$('.left_menu').css({'height': move_conH + 'px'});
+			}
+		
+		}
+
+	});
+
+
+
+
+</script>
+
+
+
+</section>
+
+
+<div class="go_top_area">
+    <button type="button" class="go_top">
+        <img src="img/go_top_black.png" alt="상단으로">
+    </button>
+</div>
+
+
+
+
+
+</body>
+</html>
